@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lesson Page</title>
+<meta charset=utf-8 />
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="lesson.js"></script>
+<script src="lessonJson.js"></script>
+<script src="bootstrap-switch.min.js"></script>
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="bootstrap-switch.min.css">
+<link rel="stylesheet" href="style.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+</head>
+
+<nav class="navbar navbar-default">
+
+  <div class="container-fluid">
+   		<button id="btn-nav-home" type="button" class="btn btn-default btn-lg navbar-btn">
+			   <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
+   </div>
+    <div class="navbar-header">
+		   <p id ="navbar-title" class="navbar-title vertical-aligned"></p>
+   </div>
+   
+</nav>
+
+<body>
+	
+	<div id="lessonContainer">
+		<div id="switchContainer">
+			<span id='labelGifMode' class='label'>Auto Loop</span>
+			<input type="checkbox" id="switchGifMode" checked>
+		</div>
+		<div id="mediaContainer" width="800" height="450">
+			<img id="imageDisplay" class="vertical-aligned">
+			</img>
+	  	</div>
+		<div class="instructionContainer right-side">
+			<div class="header">
+				<span class="title h4">Instruction</span>
+			</div>
+			<div id="instructionBox"></div>
+	  	</div>
+	  	<div class="navLessonContainer bottom" >
+	  		<button id="btnStartEnd" class="btn btn-success btn-lg btn-block" type="submit">Next</button>
+
+	  		<div class="leftSideButton">
+	  			<button id="btnPrev" class="btn btn-info btn-lg btn-default-size" type="submit" style='float: left;'>Previous</button>
+	  		</div>
+	  		<div class="rightSideButton">
+	  			<button id="btnNext" class="btn btn-info btn-lg btn-default-size" type="submit" style='float: right;'>Next</button>
+	  		</div>
+	  	</div>
+  	</div>
+</body>
+</html>
