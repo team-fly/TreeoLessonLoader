@@ -615,6 +615,280 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/ImgLessonCompleted.jpg",
             "preview": "https://s3-us-west-2.amazonaws.com/treeo/ImgLessonCompleted.jpg"
         }]
+    }, {
+        "lesson_4": [{
+            "title": "Lesson 4-Space Possible Part 2",
+            "type": "gif",
+            "instruction": "Welcome back! <br><br>Remember last class when we made our Space Impossible game? Well it's now time to expand on it!"
+                            +"Click <b>next</b> to get started!",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_1_1.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_1_1.jpeg"
+        },{
+            "title": "4-2-i: Adding directions", 
+            "type": "gif",
+            "instruction": "In this class, we will modify our script so that the rocks will come from all four directions: <br><br>"
+        					+"<ul><li>left->goes to the right</li><li>right->goes to the left</li>"
+                            +"<li>top->goes to the bottom</li><li>bottom->goes to the top</li></ul><br>"
+        					+"Click next to get started.",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_1.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_1.jpeg"
+        },{
+            "title": "4-2-ii: Direction variable", 
+            "type": "gif",
+            "instruction": "First, we will need to use a variable to keep track of which direction the meteor will go.<br><br>"
+        					+"1. Under <b>Data</b> section, create variable name 'Direction'",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_2.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_2.jpeg"
+        },{
+            "title": "4-2-iii: Randomly setting the Direction Variable", 
+            "type": "gif",
+            "instruction": "Since we will have 4 different directions, we can randomly assign Direction to be from 1-4:<br><br>"
+        					+"<ul><li>1-top to down</li><li>2-bottom to top</li><li>left to right</li><li>right to left</li></ul><br>"
+        					+"1. add <b>set</b> block to the script; select <b>Direction</b> on the drop down<br>"
+        					+"2. add in <b>pick random</b> block from Operators into <b>set</b> block<br>"
+        					+"3. set the <b>pick random</b> block to 1 and 4",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_3.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_3.jpeg"
+        },{
+        	//TODO: add in gif for asteroid coming from different directions
+            "title": "4-2-iv: The 4 different directions", 
+            "type": "gif",
+            "instruction": "Based on the value of our variable <b>Direction</b>, our asteroid will move in different directions.<br><br>"
+        					+"Direction=1: start at the top, move downwards<br>"
+        					+"Direction=2: start at the bottom, move upwards<br>"
+        					+"Direction=3: start at the left, move right<br>"
+        					+"Direction=4: start at the right, move left<br><br>"
+        					+"Click next.",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_4.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_4.jpeg"
+        },{
+            "title": "4-2-v: Checking if Direction=1", 
+            "type": "gif",
+            "instruction": "In order to check what our <b>Direction</b> variable is, we will need to use the <b>if</b> block<br><br>"
+        					+"1. add an <b>if</b> block to the clone script<br>"
+        					+"2. Using the <b>=</b> block in Operator section, check if Direction=1",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_5.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_5.jpeg"
+        },{
+            "title": "4-2-vi: Updating our script for Direction=1", 
+            "type": "gif",
+            "instruction": "From step 4-2-vi, we said that if Direction=1, we move from top to bottom block<br><br>"
+        					+"1. adjust your script by moving around the goto block and repeat block",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_6.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_6.jpeg"
+        },{
+            "title": "4-2-vii: Checkpoint", 
+            "type": "gif",
+            "instruction": "Run your program and see if the asteroid moves down when Direction=1<br><br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_7.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_7.jpeg"
+        },{
+            "title": "4-2-viii: Moving Bottom to Top", 
+            "type": "gif",
+            "instruction": "Now we have to check if Direction=2. If it is, the asteroid needs to move from bototm to top<br><br>"
+        					+"1. Duplicate the <b>if</b> block for Direction=1 and add it to the clone script<br>"
+        					+"2. Change the <b>=</b> block to <b>Direction</b>=2<br><br>"
+        					+"Since we are now changing if the asteroid reaches to the top, we have to move it up and check if the y-position is greater than 180.<br><br>"
+        					+"3. Change the <b><</b> block to <b>></b>, and the value to 180<br>"
+        					+"4. Change y by 10 instead of -10.<br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_8.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_8.jpeg"
+        },{
+            "title": "4-2-ix: Checkpoint", 
+            "type": "gif",
+            "instruction": "Now your asteroid should come from both top and the bottom. Run your program to check!<br><br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_9.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_9.jpeg"
+        },{
+            "title": "4-2-x: Moving Left to Right part 1", 
+            "type": "gif",
+            "instruction": "If Direction=3, our asteroid should move from left to right.<br><br>"
+        					+"1. Duplicate the <b>if</b> block for Direction=1<br> and add it to the clone script<br>"
+        					+"2. Edit the <b>if</b> block to check if <b>Direction</b>=3",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_10.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_10.jpeg"
+        },{
+            "title": "4-2-xi: Moving Left to Right part 2", 
+            "type": "gif",
+            "instruction": "We have set make the asteroid appear at the left side, with a random y position.<br><br>"
+        					+"1. Edit the <b>goto</b> block so that x=-240, and y is randomly selected from -160 to 160<br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_11.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_11.jpeg"
+        },{
+            "title": "4-2-xii: Moving Left to Right part 3", 
+            "type": "gif",
+            "instruction": "We will keep moving the asteroid right until our x position is greater than 240.<br><br>"
+        					+"1. Edit <b>repeat</b> block to check if x position > 240<br>"
+        					+"2. Replace the <b>change y by</b> block with <b>change x by</b> block<br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_12.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_12.jpeg"
+        },{
+            "title": "4-2-xiii: Checkpoint", 
+            "type": "gif",
+            "instruction": "Your asteroid should now also come from the left. Run your program and check if it works!<br><br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_13.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_13.jpeg"
+        },{
+            "title": "4-2-xiv: Moving right to left", 
+            "type": "gif",
+            "instruction": "Finally, we will handle if Direction = 4, which is when the asteroid moves from the right to left.<br><br>"
+        					+"1. Duplicate the if block for <b>Direction</b>=3 and add it to the script<br>"
+        					+"2. Change the if block to check if <b>Direction=4</b>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_14.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_14.jpeg"
+        },{
+            "title": "4-2-xv: Moving right to left part 2", 
+            "type": "gif",
+            "instruction": "Make the following changes to complete the program<br><br>"
+        					+"1. go to x=240 instead of x=-240<br>"
+        					+"2. repeat until x-position < -240<br>"
+        					+"3. change x by -10<br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_15.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_15.jpeg"
+        },{
+            "title": "4-2-xvi: Checkpoint", 
+            "type": "gif",
+            "instruction": "The asteroids should now come from all 4 directions. Run your program to check!<br><br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_2_16.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_2_16.jpeg"
+        },{
+            "title": "4-3-i: Health Bar", 
+            "type": "gif",
+            "instruction": "Seeing that we have a health value, we should make a health bar!<br><br>"
+        					+"Our health bar will be green at the start. When Astro Cat get hit by an asteroid, it will become a bit red.<br>"
+        					+"Click next to get started!",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_1.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_1.jpeg"
+        },{
+            "title": "4-3-ii: Starting things off", 
+            "type": "gif",
+            "instruction": "As always, we have to do some preparation at the start.<br><br>"
+        					+"1. Click on the Health sprite<br>"
+        					+"2. Add in a <b>Start</b> block.<br><br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_2.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_2.jpeg"
+        },{
+            "title": "4-3-iii: Using the pen", 
+            "type": "gif",
+            "instruction": "We will use the pen tool to draw the health bar. Let's make set the pen size and make sure everything is cleared.<br><br>"
+        					+"1. Add in <b>set pen size</b> block and set it 8.<br>"
+        					+"2. Add in a clear block.<br><br>"
+        					+"<b>Note:</b> our health sprite is just an 1 pixel dot, is it pretty much invisible. Why do you think that is okay?",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_3.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_3.jpeg"
+        },{
+            "title": "4-3-iv: Setting the pen color", 
+            "type": "gif",
+            "instruction": "Let's set the color to green, so we can start with a full health bar."
+        					+"1. Drag in the <b>set pen color</b> block"
+        					+"2. Set the value of the color to 70, which is green",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_4.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_4.jpeg"
+        },{
+            "title": "4-3-v: Starting position", 
+            "type": "gif",
+            "instruction": "We will move our Health spirit to somewhere in the top right corner since that is a good place to put an health bar.<br><br>"
+        					+"1. Add in an <b>go to x, y</b> block.<br>"
+        					+"2. Set the x to 120, y to 160",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_5.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_5.jpeg"
+        },{
+            "title": "4-3-vi: Drawing the green bar", 
+            "type": "gif",
+            "instruction": "Let's actualy draw the green health bar now!<br><br>"
+        					+"1. Bring in an <b>pen down</b> block to start drawing<br>"
+        					+"3. Add in an <b>go to x, y</b> block.<br>"
+        					+"3. Set the x to 220, y to 160",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_6.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_6.jpeg"
+        },{
+            "title": "4-3-vii: Checkpoint", 
+            "type": "gif",
+            "instruction": "When you start your game, there now should be a green health bar on the top right!<br><br>"
+        					+"Run your program to check!",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_7.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_7.jpeg"
+        },{
+            "title": "4-3-viii: Broadcasting Health decreased", 
+            "type": "gif",
+            "instruction": "When Astro Cat gets hit by an asteroid, we should broadcast a message so our Health sprite will know!<br><br>"
+        					+"1. Click on the Asteroid sprite<br>"
+        					+"2. Add in a <b>broadcast</b> block<br>"
+        					+"3. Create a message called HealthDecreased and set the Broadcast block to it<br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_8.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_8.jpeg"
+        },{
+            "title": "4-3-ix: Receiving the message", 
+            "type": "gif",
+            "instruction": "Let's go back to our health sprite and handle the HealthDecreased message<br><br>"
+        					+"1. Click on the Health sprite<br>"
+        					+"2. Add in a <b>When I receive</b> block<br>"
+        					+"3. Change the message to <b>HealthDecrease</b><br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_9.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_9.jpeg"
+        },{
+            "title": "4-3-x: Drawing the health decrease", 
+            "type": "gif",
+            "instruction": "When we received the message, we will draw in red to show our health has decreased.<br><br>"
+        					+"1. Change the pen color to 0 (red)<br>"
+        					+"2. Move -20 steps",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_10.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_10.jpeg"
+        },{
+            "title": "4-3-xi: Checkpoint", 
+            "type": "gif",
+            "instruction": "Your health bar should be now decreasing whenever Astro Cat gets hit by an asteroid!<br><br>"
+        					+"Run your program and check!",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_3_11.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_3_11.jpeg"
+        },{
+            "title": "4-4-Tasks",
+            "type": "gif",
+            "instruction": "Time to add some features to your game on your own!<br><br>"
+        					+"This is the time to apply what you learned, and be creative with your programming solutions!",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_4.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_4.jpeg"
+        },{
+            "title": "4-4-1: Task 1-Getting health kits",
+            "type": "gif",
+            "instruction": "Your first task is program in a HealthKit.<br><br>"
+        					+"The HealthKit will reappear after a random amount of time.<br>"
+        					+"The HealthKit will reappear at a random place on the screen.<br>"
+        					+"The HealthKit will give the hero 20 extra health.<br><br>"
+        					+"<b>Hint</b>: you will need to create a new message called IncreaseHealth. It will be broadcasted by the HealthKit sprite.<br><br>"
+        					+"<b>Note</b>: You can download the sprite image from this <a href=\"https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/HealthSprite.png\" target=\"_blank\">link</a>. Upload it in your sprite area.",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_4_1.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_4_1.jpeg"
+        },{
+            "title": "4-4-2: Task 2-Speed Boost",
+            "type": "gif",
+            "instruction": "Your second task is program in a SpeedBoost.<br><br>"
+        					+"The SpeedBoost sprite will reappear after a random amount of time.<br>"
+        					+"The HealthKit will reappear at a random place on the screen.<br>"
+        					+"The HealthKit will increase the hero's speed by 5.<br><br>"
+        					+"<b>Hint</b>: see next page for hint<br><br>"
+        					+"<b>Note</b>: You can download the sprite image from this <a href=\"https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/SpeedSprite.png\" target=\"_blank\">link</a>. Upload it in your sprite area.",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_4_2.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_4_2.jpeg"
+        },{
+            "title": "4-4-3: Task 2-Speed Boost Hint",
+            "type": "gif",
+            "instruction": "You will need to create a variable called Speed<br><br>"
+        					+"Instead of just leaving it at -10, or 10 when you press the arrow keys, you can move it by <b>Speed</b>. <br><br>"
+        					+"For the -10, you have to use the multiply operator, *, and multiple speed by -1.<br>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/gif/4_4_3.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_4/preview/4_4_3.jpeg"
+        },{
+            "title": "4-4-4: Task 3 - Have the Energy Ball move randomly",
+            "type": "gif",
+            "instruction": "Just having the energy ball stay in one place is no fun!<br><br>"
+        					+"Modify the energy ball script to have it move randomly on the screen.<br><br>"
+        					+"<b>Hints:</b> <ul><li>you will need to replace the wait until block with a repeat until block</li>"
+        					+"<li>when the energy ball moves, you will also need to rotate it</li>"
+        					+"<li>use the <b>if on edge, bounc</b> block so that when the energy ball hits an edge, it bounces right back</li></ul>",
+            "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_3/gif/4_4_4.gif",
+            "preview": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_3/preview/4_4_4.jpeg"
+        }]
     }],
     "arduino": [{
         "lesson_1": [{
