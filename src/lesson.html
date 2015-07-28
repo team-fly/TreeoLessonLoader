@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Lesson Page</title>
-<meta charset=utf-8 />
-<script src="http://code.jquery.com/jquery-latest.js"></script>
-<script src="lesson.js"></script>
-<script src="lessonJson.js"></script>
-<script src="bootstrap-switch.min.js"></script>
+	<title>Lesson Page</title>
+	<meta charset=utf-8/>
 
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-<link rel="stylesheet" href="bootstrap-switch.min.css">
-<link rel="stylesheet" href="style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="bootstrap-switch.min.css">
+	<link rel="stylesheet" href="gifplayer.css">
+	<link rel="stylesheet" href="style.css">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-
+	<style type="text/css" media="screen">
+    body {
+        overflow: hidden;
+    }
+    #editor {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+  </style>
 </head>
 
 <nav class="navbar navbar-default">
@@ -27,17 +34,27 @@
     <div class="navbar-header">
 		   <p id ="navbar-title" class="navbar-title vertical-aligned"></p>
    </div>
-   
+
 </nav>
 
 <body>
-	
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script src="lesson.js"></script>
+	<script src="lessonJson.js"></script>
+	<script src="bootstrap-switch.min.js"></script>
+	<script src="jquery.gifplayer.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+
 	<div id="lessonContainer">
 		<div id="switchContainer">
 			<span id='labelGifMode' class='label'>Auto Loop</span>
 			<input type="checkbox" id="switchGifMode" checked>
 		</div>
 		<div id="mediaContainer" width="800" height="450">
+			<div id="editor"></div>
+			<iframe id="youtubeDisplay" src="" width="800" height="450">
+		  	</iframe>
 			<img id="imageDisplay" class="vertical-aligned">
 			</img>
 	  	</div>
@@ -58,5 +75,13 @@
 	  		</div>
 	  	</div>
   	</div>
+
+	<script src="http://cdn.jsdelivr.net/ace/1.2.0/min/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+	    var editor = ace.edit("editor");
+	    editor.setTheme("ace/theme/monokai");
+	    editor.getSession().setMode("ace/mode/c_cpp");
+		editor.setReadOnly(true);
+	</script>
 </body>
 </html>
