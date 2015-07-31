@@ -1,31 +1,34 @@
 /// <reference path="../typings/jquery/jquery.d.ts"/>
+var NAVIGATION_URL="navigation.html";
+var LESSON_START_IMG_URL="https://s3-us-west-2.amazonaws.com/treeo/ImgStartLesson.jpg";
+var LESSON_END_IMG_URL="https://s3-us-west-2.amazonaws.com/treeo/ImgLessonCompleted.jpg";
+
+var json=loadLessonIntoJsonObj();
+
+var MediaTypeIdNVP = {
+    image: '#imageDisplay',
+    video: '#videoDisplay',
+    youtube: '#youtubeDisplay',
+    text: '#textDisplay'
+};
+
 var index=-1;
-var lessonId;
-var startLessonImgUrl="https://s3-us-west-2.amazonaws.com/treeo/ImgStartLesson.jpg";
-var endLessonImgUrl="https://s3-us-west-2.amazonaws.com/treeo/ImgLessonCompleted.jpg";
-var navigationUrl="navigation.html";
-var jsonLesson;
-var json;
-var $mediaContainer = "#mediaContainer";
-var $imageDisplay = '#imageDisplay';
-var $gifDisplay = '#gifDisplay';
-var $codeDisplay = '#codeDisplay';
-var $youtubeDisplay = '#youtubeDisplay';
+
+var videoPlayer;
+var videoSrc;
 
 var main =function(){
-    $("#editor").hide();
-    $($youtubeDisplay).hide();
     $("#btnNext").hide();
     $("#btnPrev").hide();
+    hideAllMediaElements();
+    
+    $("#switchVideoMode").bootstrapSwitch();
+    $("#imageDisplay").attr("src", LESSON_START_IMG_URL).show();
 
-    $("#switchGifMode").bootstrapSwitch();
-    $($imageDisplay).attr("src", startLessonImgUrl);
-    $($codeDisplay).hide();
-
-    var hashLessonIdentifier = window.location.hash.substr(1);
-    var res = hashLessonIdentifier.split("_");
-
-    json=jsonMain[res[0]][parseInt(res[1])-1]["lesson_"+res[1]];
+    initializeInstructionBoxHeight("#imageDisplay");
+    
+    videoPlayer=document.getElementById('videoPlayer');
+    videoSrc=document.getElementById('videoSrc');
 
     $("#btnStartEnd").click(function () {
         $("#btnStartEnd").hide();
@@ -37,11 +40,11 @@ var main =function(){
 
   	$("#btnNext").click(function () {
         if(index>=json.length-1){
-          $("#btnNext").hide();
-          $("#btnPrev").hide();
+            $("#btnNext").hide();
+            $("#btnPrev").hide();
 
-          $($imageDisplay).attr("src", endLessonImgUrl);
-          return;
+            $("#imageDisplay").attr("src", LESSON_END_IMG_URL);
+            return;
         };
 
         if( index<json.length){
@@ -67,69 +70,77 @@ var main =function(){
     });
 
     $('#btn-nav-home').click(function () {
-      window.location.href = navigationUrl;
+      window.location.href = NAVIGATION_URL;
     });
+    
 };
 
-function hoverLoadGif(previewUrl, gifUrl){
-  $($imageDisplay).attr('src', previewUrl);
-  $($imageDisplay).hover(function(){
-    // on mouse enter
-    $(this).attr('src',gifUrl);
-  }, function(){
-    // on mouse leave
-    $(this).attr('src', previewUrl);
-  });
-};
 
 function loadResource(){
-    document.getElementById("navbar-title").innerHTML = json[index].title;
-    document.getElementById("instructionBox").innerHTML = json[index].instruction;
 
-  if(json[index].type=="gif"){
-    /*
-    $("#editor").hide();
-    $($imageDisplay).hide();
-    $($gifDisplay).attr("src", json[index].location);
-    $($gifDisplay).show();
-    $('.gifplayer').gifplayer();
-    */
-    $("#editor").hide();
-    $($youtubeDisplay).hide();
-    
-    if($("#switchGifMode").bootstrapSwitch("state")==true){
-      $($imageDisplay).unbind('mouseenter mouseleave');
-      $($imageDisplay).attr("src", json[index].location);
-    }else{
-      hoverLoadGif(json[index].preview, json[index].location);
-    }
-    $($imageDisplay).show();
-    
-  }else if(json[index].type=="img"){
-    $("#editor").hide();
-    $($youtubeDisplay).hide();
-    $($imageDisplay).attr("src", json[index].location);
-    $($imageDisplay).show();
-  }else if(json[index].type=="txt"){
-    $($youtubeDisplay).hide();
-    $($imageDisplay).hide();
-    $("#editor").show();
+  hideAllMediaElements();
+  $("#navbarTitle").html( json[index].title+"<span class='caret'></span>");
+  $("#instructionContainer .instruction-body").innerHTML=json[index].instruction;
 
-    $.ajax({
-           url : json[index].location,
-           dataType: "text",
-           success : function (data) {
-             editor.setValue(data);
-           }
-       });
-  }else if(json[index].type=="youtube"){
-    $($imageDisplay).hide();
-    $("#editor").hide();
-    $($youtubeDisplay).show();
-    $($youtubeDisplay).attr("src", json[index].location);
-    
+  switch (json[index].type) {
+    case "image":
+        $("imageDisplay").attr("src", json[index].location).show();
+        break;
+    case "video":
+      //TODO: check if jquery selector works
+        videoSrc.setAttribute('src', json[index].location);
+        videoPlayer.load();
+        $("#videoDisplay").show();
+        initiateSlider();
+        break;
+    case "youtube":
+        $("#youtubeDisplay").attr("src", json[index].location).show();
+        break;
+    case "text":
+        $("#textDisplay").setValue(downloadFromAjax(json[index].location)).show();
+        break;
 
+     initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type]);
   }
-};
+}
+
+function initializeInstructionBoxHeight(divId){
+    //TODO: modify this function to be more dynamic
+    console.log(divId+"height is "+getHeight(divId));
+    console.log("#instructionContainer .instruction-header height is "+getHeight("#instructionContainer .instruction-header"));
+    console.log("height different is "+ (getHeight(divId)-getHeight("#instructionContainer .instruction-header")).toString());
+
+    $(".instruction-body").height(getHeight(divId)-112);
+}
+
+function initiateSlider(){
+  
+  document.getElementById('videoPlayer').addEventListener('loadedmetadata', function() {
+    this.pause();
+    var duration=this.duration;
+    new Dragdealer('videoSlider', {
+      animationCallback: function(x, y) {
+        document.getElementById('videoPlayer').currentTime=x*duration;
+          $('#videoSliderValue').text(Math.round(x * 100)+"%");
+      }
+    });
+  });
+}
+
+function loadLessonIntoJsonObj(){
+    var lessonLoadInfo=window.location.hash.substr(1).split("_")
+    var lessonType = lessonLoadInfo[0];
+    var lessonNumberIndex=parseInt(lessonLoadInfo[1])-1;
+    var lessonString="lesson_"+lessonLoadInfo[1];
+    return jsonMain[lessonType][lessonNumberIndex][lessonString];
+
+}
+
+function hideAllMediaElements(){
+    $("#textDisplay").hide();
+    $("#youtubeDisplay").hide();
+    $("#imageDisplay").hide();
+    $("#videoDisplay").hide();
+}
 
 $(document).ready(main);

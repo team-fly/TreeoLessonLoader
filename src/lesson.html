@@ -7,74 +7,96 @@
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 	<link rel="stylesheet" href="bootstrap-switch.min.css">
-	<link rel="stylesheet" href="gifplayer.css">
+	<link rel="stylesheet" href="http://skidding.github.io/dragdealer/src/dragdealer.css">
 	<link rel="stylesheet" href="style.css">
-
-	<style type="text/css" media="screen">
-    body {
-        overflow: hidden;
-    }
-    #editor {
-        margin: 0;
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-    }
-  </style>
 </head>
 
-<nav class="navbar navbar-default">
 
-  <div class="container-fluid">
-   		<button id="btn-nav-home" type="button" class="btn btn-default btn-lg navbar-btn">
-			   <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
-   </div>
-    <div class="navbar-header">
-		   <p id ="navbar-title" class="navbar-title vertical-aligned"></p>
-   </div>
 
-</nav>
-
-<body>
+<body onresize="initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type])">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="lesson.js"></script>
+	<script src="common-utils.js"></script>
 	<script src="lessonJson.js"></script>
+	<script src="lesson.js"></script>
 	<script src="bootstrap-switch.min.js"></script>
-	<script src="jquery.gifplayer.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="http://skidding.github.io/dragdealer/src/dragdealer.js"></script>
+
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="pull-left" >
+                        <button id="btn-nav-home" type="button" class="btn btn-default btn-lg navbar-btn">
+                            <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
+                    </li>
+                    <li class="dropdown">
+                        <a id='navbarTitle' href="#" class="dropdown-toggle btn-lg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            </a>
+                        <ul id="lessonStepDropdown" class="dropdown-menu">
+
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 
 
-	<div id="lessonContainer">
-		<div id="switchContainer">
-			<span id='labelGifMode' class='label'>Auto Loop</span>
-			<input type="checkbox" id="switchGifMode" checked>
+    <div class="row">
+		<div id="videoSwitchContainer" class="col-sm-3 col-sm-offset-5">
+			<span id='labelVideoMode' class='label'>Auto Loop</span>
+			<input  id="switchVideoMode" type="checkbox" >
 		</div>
-		<div id="mediaContainer" width="800" height="450">
-			<div id="editor"></div>
-			<iframe id="youtubeDisplay" src="" width="800" height="450">
-		  	</iframe>
-			<img id="imageDisplay" class="vertical-aligned">
-			</img>
-	  	</div>
-		<div class="instructionContainer right-side">
-			<div class="header">
+	</div>
+	<div id="lessonStepContainer" class="row">
+		<div id="mediaContainer" class="col-sm-8">
+			<img id="imageDisplay" class="lesson-media" />
+			<div id="videoDisplay" class="lesson-media">
+                <video id="videoPlayer" tabindex="0" autobuffer="autobuffer" preload="preload" width="100%" >
+                    <source id="videoSrc" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />
+                    <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+                </video>
+				<div id="videoSlider" class="dragdealer">
+					<div class="handle red-bar">
+						<span id="videoSliderValue"></span>
+					</div>
+				</div>
+			</div>
+			<iframe id="youtubeDisplay" class="lesson-media"></iframe>
+			<div id="textDisplay" class="lesson-media"></div>
+		</div>
+		<div id="instructionContainer" class="col-sm-4">
+			<div class="row instruction-header">
 				<span class="title h4">Instruction</span>
 			</div>
-			<div id="instructionBox"></div>
-	  	</div>
-	  	<div class="navLessonContainer bottom" >
-	  		<button id="btnStartEnd" class="btn btn-success btn-lg btn-block" type="submit">Next</button>
+			<div class="row instruction-body">Sample Text</div>
+		</div>
+	</div>
+	<div class="row" id="lessonNavigationContainer" >
+		<div class="col-sm-8">
+			<button id="btnStartEnd" class="btn btn-success btn-lg btn-block" type="submit">Next</button>
 
 	  		<div class="leftSideButton">
-	  			<button id="btnPrev" class="btn btn-info btn-lg btn-default-size" type="submit" style='float: left;'>Previous</button>
+	  			<button id="btnPrev" class="btn btn-info btn-lg btn-default-size pull-left" type="submit" >Previous</button>
 	  		</div>
 	  		<div class="rightSideButton">
-	  			<button id="btnNext" class="btn btn-info btn-lg btn-default-size" type="submit" style='float: right;'>Next</button>
+	  			<button id="btnNext" class="btn btn-info btn-lg btn-default-size pull-right" type="submit" >Next</button>
 	  		</div>
-	  	</div>
-  	</div>
+		</div>
+	</div>
+
 
 	<script src="http://cdn.jsdelivr.net/ace/1.2.0/min/ace.js" type="text/javascript" charset="utf-8"></script>
 	<script>

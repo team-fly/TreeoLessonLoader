@@ -3,13 +3,13 @@ var jsonMain = {
         "lesson_1": [{
             "mediaId": "scratch_lv1_l1_1",
             "title": "Step 1 - Signing up for Scratch",
-            "type": "video",
+            "type": "youtube",
             "instruction": "We'll start by signing up for an account on Scratch. " + "<br><br>1. Google Scratch by MIT. <br>2. select the first link that you see",
             "location": "http://www.youtube.com/embed/Ezphe5kDFNg?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_2",
             "title": "Step 2 - Having a Sprite Say Hello",
-            "type": "video",
+            "type": "youtube",
             "instruction": "1. Click on Looks section. \\n 2. Drag say Hello block to Script area. \\n3. Click on it to see what it does",
             "location": "http://www.youtube.com/embed/B88WKw8ZIdE?rel=0&autoplay=1"
         }, {
@@ -20,127 +20,127 @@ var jsonMain = {
         }, {
             "mediaId": "scratch_lv1_l1_4",
             "title": "Step 4 - Moving the Cat forward!",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/-0T1QDIdBj4?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 5 - Moving the Cat backward",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/CKX4RVXnI6w?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 6 - Adding a wait block, so we can see!",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/0EnO4cY0SM8?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 7 - Making the cat dance",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/kwJZA1eXVtc?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 8 - Repeats makes our lives easier",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/HtWPm1fH49Q?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 9 - Adding some beats",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/Ztj2KfHVu-c?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 10 - Start with the flag",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/axvAXA4Uf9w?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 11 - Jam it up!",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/YIMNCWWfsFQ?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 12 - Playing music with the party",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/q1B3yu9-G4Y?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 13 - Setting the stage for some dancing",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/9anfwQKVl6U?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 14 - Our cat is now a dancer",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/w_yU4gsHrs8?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "Step 15 - Spice things up with some effects",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/jQxgKxLU7X0?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/MzVpP6EkpWA?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/S2InlKDpTvg?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/zQlqSqS3e4U?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/FgPZq9fe9es?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/Qh0Hljeq0yM?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/2PIXE1mck84?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/XA0WHbKfinM?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/QoZgkBZI8Bw?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/cx0GjYUjzUY?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/NLNRg7Z2qVY?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/8cTFUKm6aIk?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/P5xlKh1IIP8?rel=0&autoplay=1"
         }, {
             "mediaId": "scratch_lv1_l1_",
             "title": "",
-            "type": "video",
+            "type": "youtube",
             "location": "http://www.youtube.com/embed/3PhXWucCrkY?rel=0&autoplay=1"
         }]
     }, {
@@ -1071,7 +1071,7 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_5/5-4-7.gif"
         },{
             "title": "Lesson 5-4-8 - Conditions for exiting?",
-            "type": "img",
+            "type": "image",
             "instruction": "In order for the clone to stop, it can be any 1 of 3 different conditions.<br><br>Can you identify them?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_5/5-4-8.png"
         },{
@@ -1121,12 +1121,12 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_5/5-4-17.png"
         },{
             "title": "Lesson 5-4-18 - Why the bug is happening",
-            "type": "img",
+            "type": "image",
             "instruction": "This is because the two sprites can't sense each other!<br><br>In the script for the laser beam, if it touches the alien clone, it hides. If the laser beam is hidden, the alien clone won't be able sense that it touched it!<br><br>If the alien clone sprite gets deleted first, the laser beam won't be able to sense that it touched the alien clone so it keeps moving!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_5/5-4-18.png"
         },{
             "title": "Lesson 5-4-19 - Task",
-            "type": "img",
+            "type": "image",
             "instruction": "Try fixing this bug yourself!<br><br>Take 10-15 minutes, see if you can figure out your own solution to solve this problem. <br>If you are finished, ask the teacher to check out your solution!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch/level_1/lesson_5/5-4-19.gif"
         },{
@@ -1340,62 +1340,62 @@ var jsonMain = {
     }, {
         "lesson_4": [{
             "title": "Lesson 4 - Navigation",
-            "type": "img",
+            "type": "image",
             "instruction": "So last class, you made a robot.<br>Now you might be wondering, what is it going to do? <br><br>" + "For starters, it has to move! This class, we will be learning how to move our robot!<br><br>" + "Click next to get started!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4_1_1.jpg"
         }, {
             "title": "Lesson 4-1-i: Robot's Motion",
-            "type": "img",
+            "type": "image",
             "instruction": "Like any car, your robot should have mainly four different movements: <br><br>" + "<ul><li>go forward</li><li>go backward</li><li>turn left</li><li>turn right</li></ul><br><br>" + "We will need to program our robot to be able to do all of these.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4_1_1.jpg"
         }, {
             //show gif of robot going straight
             "title": "Lesson 4-1-ii: Moving Straight",
-            "type": "img",
+            "type": "image",
             "instruction": "To make the robot go forward, both wheels have to spin in different directions<br><br>" + "<b>Question:</b> To go forward, which direction does each of them have to turn?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4_1_1.jpg"
         }, {
             "title": "Lesson 4-1-iii: The ways the wheels turn",
-            "type": "img",
+            "type": "image",
             "instruction": "To make the robot go forward, we have to program the robot so that: <br><br>" + "<ul><li>left wheel spins <b>counter-clockwise</b></li><li>right wheel spins <b>clockwise</b></li></ul>",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4_1_3.jpg"
         }, {
             "title": "Lesson 4-1-iv: On to the coding!",
-            "type": "img",
+            "type": "image",
             "instruction": "We will now program the robot!<br><br>" + "Start by opening your Arduino IDE (shortcut on desktop)." + "When you open Arduino, the code will look like the left.<br><br>" + "void setup<br>" + "Code in here only runs <b>once</b> at the <b>start</b>.<br><br>" + "void loop<br>" + "code in here runs <b>continuously</b> after <b>setup</b>.<br><br>" + "<b>Note:</b>: Don't delete these! They have to be here for the program to run!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-4.png"
         }, {
             "title": "Lesson 4-1-v: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Now we will need to work with the motors. To work with the motor, we will need to use the <b>Servo</b> library.<br><br>A <b>library</b> in programming has a bunch of code someone else wrote already that we can just use.<br><br>" + "In this case, someone already wrote code to work with servo motors in the file <i>Servo.h</i>, we just have to use it.<br><br>" + "<i>Add <b>line 1</b> to your code." + "",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-5.png"
         }, {
             "title": "Lesson 4-1-vi: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Using the code from <b>Servo</b> library, we have to declare an object for our left and right motors. <br><br>" + "<i>Add <b>lines 3-4</b> to your code.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-6.png"
         },{
             "title": "Lesson 4-1-vii: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Now that we declared everything, we have to attach an input to our motor.<br><br>"
                             +"Add <b>lines 8-9</b> to your code.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-7.png"
         },{
             "title": "Lesson 4-1-viii: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Once the inputs are attached to the object, we can start controlling it.<br><br>"
                             +"Add <b>lines 11-12</b> to your code to make your robot go straight.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-8.png"
         },{
             "title": "Lesson 4-1-ix: ",
-            "type": "img",
+            "type": "image",
             "instruction": "We are only going make the robot move forward for 3 seconds.<br><br>"
                             +"To make sure the robot stops after that, we will add a delay.<br><br>"
                             +"Add <b>line 13</b>.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-9.png"
         },{
             "title": "Lesson 4-1-x: ",
-            "type": "img",
+            "type": "image",
             "instruction": "To stop the motor, we will detach it from our program. No signal will be send to the motor after.<br><br>"
                             +"Add <b>line 15-16</b>",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-10.png"
@@ -1421,7 +1421,7 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/Forward_Backward.gif"
         },{
             "title": "Lesson 4-2-i:  ",
-            "type": "img",
+            "type": "image",
             "instruction": "Turning our robot is not that much harder than moving straight. It's just a small code change.<br><br>"
                             +"We will have to make both of our wheels turn clockwise (input of 1300)<br><br>"
                             +"Add in lines 16-18 into your code to turn left after going straight.",
@@ -1433,7 +1433,7 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/Turning_Left.gif"
         },{
             "title": "Lesson 4-2-iii:  ",
-            "type": "img",
+            "type": "image",
             "instruction": "To make it turn right we'd have to make both wheels turn counter-clockwise (input of 1700).<br><br>"
                             +"Replace your code for turning left with line 16-18 on the left.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-2-3.png"
@@ -1454,36 +1454,36 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/Forward_Backward.gif"
         },{
             "title": "Lesson 4-2-vi: Task 2",
-            "type": "img",
+            "type": "image",
             "instruction": "Create a new program. In this new program, get your robot to travel in a perfect square.<br>",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/Moving_In_Square.gif"
         },{
             "title": "Lesson 4-3-i: Functions: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Functions are one of the most important parts of programming!<br><br>"
                             +"They make your program easier to read and easy to maintain.<br><br>"
                             +"Q: Do you know any functions that is already there in our program?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-1-4.png"
         },{
             "title": "Lesson 4-3-ii: Repeting code",
-            "type": "img",
+            "type": "image",
             "instruction": "Look at your program that you used to make your robot go in a square.<br><br>"
                             +"Q: Which 3 lines of code appears over and over again?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-2.png"
         },{
             "title": "Lesson 4-3-iii: ",
-            "type": "img",
+            "type": "image",
             "instruction": "As you may have noticed, the three lines on the left appears over and over again!<br><br>"
                             +"To make our code shorter, we are going to make a function to replace those lines.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-3.png"
         },{
             "title": "Lesson 4-3-iv: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Edit your code (or simply copy what's on the left) so that you have this in your Arduino code editor.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-4.png"
         },{
             "title": "Lesson 4-3-v: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Add in lines 22-25 to your code.<br><br>"
                             +"We have just created a function. This function takes in 3 values:"
                             +"<ul><li>speedLeft - speed of left motor</li><li>speedRight - speed of right motor</li>"
@@ -1492,7 +1492,7 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-5.png"
         },{
             "title": "Lesson 4-3-vi: ",
-            "type": "img",
+            "type": "image",
             "instruction": "Add in lines 24 - 26 to your code. Let's see what this program does.<br><br>"
                             +"servoLeft.writeMicroseconds(1500+speedLeft):<br>"
                             +"this will write 1500 plus what speedLeft is to the left motor.<br>"
@@ -1506,14 +1506,14 @@ var jsonMain = {
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-6.png"
         },{
             "title": "Lesson 4-3-vii: Using the maneuver function",
-            "type": "img",
+            "type": "image",
             "instruction": "Now that we finished coding the maneuver function, it's time to use it!<br><br>"
                             +"Add in line 12 to your program and run it."
                             +"What did it do?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-7.png"
         },{
             "title": "Lesson 4-3-viii: Using the maneuver function Part 2",
-            "type": "img",
+            "type": "image",
             "instruction": "Add in line 13 to your code. What does it do now?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_4/4-3-8.png"
         },{
@@ -1534,72 +1534,72 @@ var jsonMain = {
     },{
         "lesson_5": [{
             "title": "Lesson 5 - Adding Electronics",
-            "type": "img",
+            "type": "image",
             "instruction": "Welcome back everyone!<br><br>Today we will be adding some extra electronics part to our robot.<br><br>Click next to get started!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_1.png"
         },{
             "title": "Lesson 5-1-2: Piezoelectric Speaker",
-            "type": "img",
+            "type": "image",
             "instruction": "<i>Piezo what?</i><br><br>Don't worry! It's okay if you don't know what it is.<br><br>It looks like the little thing on your left. It makes a sound when you send electricity to it!<br><br>We will use it to add some sounds to our robot.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_2.png"
         },{
             "title": "Lesson 5-1-3: Circuit for Piezoelectric Speaker",
-            "type": "img",
+            "type": "image",
             "instruction": "To get the speaker to make a sound, connect your Piezoelectric speaker to the breadboard on the shield like the circuit on the left.<br><br>Make sure your positive input is on <b>Pin 4</b>.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_3.png"
         },{
             "title": "Lesson 5-1-4: Programming the Piezoelectric Speaker",
-            "type": "txt",
+            "type": "text",
             "instruction": "In order to get the Piezoelectric speaker to make a sound, we have to program Arduino to send it a electrical signal.<br><br>Open up your Arduino editor.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_4.c"
         },{
             "title": "Lesson 5-1-5: Making a sound",
-            "type": "txt",
+            "type": "text",
             "instruction": "Arduino has a built in <b>tone</b> function you can use to get the speaker to make a sound.<br><br>Add in line 9 to your code.<br><br>Connect your Arduino, and upload your program to make a sound!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_5.c"
         },{
             "title": "Lesson 5-1-6: Serial communication",
-            "type": "img",
+            "type": "image",
             "instruction": "Do you know what USB stands for?<br><br>It actually stands for Universal Serial Bus. The <b>S</b>erial in USB is a method of communication between electronics. Your Arduino uses USB, so it uses this as well!<br><br>Why do you care? Click next to find out!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_6.png"
         },{
             "title": "Lesson 5-1-7: Printing Hello!",
-            "type": "txt",
+            "type": "text",
             "instruction": "Create a new Arduino program (File->new).<br><br>Add in line 3-4 ",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_7.c"
         },{
             "title": "Lesson 5-1-8: Receiving the message from Arduino",
-            "type": "img",
+            "type": "image",
             "instruction": "Upload your code and open up the serial monitor(highlighted in the image).<br><br>Cool right? You just programmed your Arduino board to send a message to your computer through serial communication!<br><br>This is how your computer and Arduino talks.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_8.png"
         },{
             "title": "Lesson 5-1-9: Loops",
-            "type": "txt",
+            "type": "text",
             "instruction": "Now we will dive into something more interesting. Loops!<br><br>1.Copy the code on your left to your Arduino editor<br> 2. Upload to arduino<br> 3.your serial port monitor. What do you see?<br><br>For loops is a way to count. The loop on the left repeats the code inside 5 times. Everytime it repeats, the value i increases by 1(defined by the i++).<br><br>It will keep looping as long as the value of i is less than 5 (i<5).",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_9.c"
         },{
             "title": "Lesson 5-1-10: More on loops",
-            "type": "img",
+            "type": "image",
             "instruction": "Loops are used for repeating!<br><br>It's there to help you automatically do something.<br><br>Look at the comic on the left, do you see what he did there?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_10.jpg"
         },{
             "title": "Lesson 5-1-11: Task - Modifying the loop",
-            "type": "img",
+            "type": "image",
             "instruction": "Task: try to get your loop to print out the following: <br><ul><li>print 0 to 9</li><li>print 0 to 10 (Hint*: try <= instead of <)</li><li>1 to 10</li></ul>",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_11.png"
         },{
             "title": "Lesson 5-1-12: Loop while counting backward",
-            "type": "txt",
+            "type": "text",
             "instruction": "Loops can count backwards too. Your variable will start at the higher number, and decrease each time.<br><br>Replace your loop with lines 6-8 on the left. <br><br>Upload it to arduino, and open up the serial port to see what's displayed.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_12.c"
         },{
             "title": "Lesson 5-1-13: Using the for loop to play music",
-            "type": "txt",
+            "type": "text",
             "instruction": "Change your program to the code on the left.<br><br>Upload it to your arduino. Do you see how we used the for loops?<br><br>Using the for loops, we automatically changed the frequency of the tone so that it plays different sounds. Neat right?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_13.c"
         },{
             "title": "Lesson 5-1-14: Playing music going to high to low",
-            "type": "txt",
+            "type": "text",
             "instruction": "Modify your code updating your what's shown on line 4.<br><br>The Piezoelectric speaker will now play sounds from high frequency to low frequency.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_14.c"
         },{
@@ -1609,7 +1609,7 @@ var jsonMain = {
             "location": "http://www.youtube.com/embed/VpRIiUfGl-o?rel=0&autoplay=1"
         },{
             "title": "Lesson 5-1-16: Saving your program",
-            "type": "txt",
+            "type": "text",
             "instruction": "Name your program something meaningful and save your program if you haven't already.<br><br>Click next to go to the next step!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_14.c"
         },{
@@ -1624,27 +1624,27 @@ var jsonMain = {
             "location": "http://www.youtube.com/embed/Lxg9GGzPm2k?rel=0&autoplay=1"
         },{
             "title": "Lesson 5-2-3: Prepping our program",
-            "type": "txt",
+            "type": "text",
             "instruction": "Remember our friend functions? Well, since it is very likely we will use ramping in more than one place, it's time to make one for ramping!<br><br>1. Open up a new Arduino program<br>2. Add in library for Servo motors -> line 1<br>3. Define your left and right motors -> lines 3-4<br>4. Attach your motors to the inputs 13,12 -> lines 8-9 ",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_3.c"
         },{
             "title": "Lesson 5-2-4: Adding a function for ramping forward",
-            "type": "txt",
+            "type": "text",
             "instruction": "Remember our friend functions? Well, since it is very likely we will use ramping in more than one place, it's time to make one for ramping in the forward direction!<br><br>1. Define a function called <i>void rampForward()</i> -> line 17-19<br>2. define a int, AKA integer, variable called <i>speedd</i> to keep track of our speed.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_4.c"
         },{
             "title": "Lesson 5-2-5: Adding a loop",
-            "type": "txt",
+            "type": "text",
             "instruction": "Since we are increasing our motor speed bit by bit, we will need to use a loop!<br><br>1. Add in a loop that: <ul><li>sets the speed to 0 at the start</li><li>stops looping when speed>200 </li><li>speed should increase by 2 everytime</li></ul><br>The code for the loop is on lines 20-22.<br><br><b>Question:</b>Why do we change speed form 0 to 200?",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_5.c"
         },{
             "title": "Lesson 5-2-6: Sending signals to our motors",
-            "type": "txt",
+            "type": "text",
             "instruction": "Everytime our program loops, we need to write the newly changed speed to each motor.<br>1. Add in lines 21-23 to your code<br><br><b>Note:</b> the 20 ms delay is important! Without it, your motor won't even move.",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_6.c"
         },{
             "title": "Lesson 5-2-7: Using the rampForward function",
-            "type": "txt",
+            "type": "text",
             "instruction": "We made the rampForward function, but how do we use it?<br><br>By calling it!<br><br>1. add line 11 to your code to run the function rampForward<br>2. add line 13-14 to your code to stop the motor after it finishes ramping",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_7.c"
         },{
@@ -1654,12 +1654,12 @@ var jsonMain = {
             "location": "http://www.youtube.com/embed/K1n_GvS8Ldc?rel=0&autoplay=1"
         },{
             "title": "Lesson 5-2-9: Ramping Forward down function",
-            "type": "txt",
+            "type": "text",
             "instruction": "I know what you are thinking:<br><br>If the robot has to use ramp to get from 0 to max speed, shouldn't ramp down from max speed to 0 when it stops?<br><br>Yes, you are exactly right! We will now create a ramp down function for stopping.<br><br>1. Add the definition for the ramp down function to your program (lines 29-31)",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_9.c"
         },{
             "title": "Lesson 5-2-10: Ramping Forward down code",
-            "type": "txt",
+            "type": "text",
             "instruction": "When we ramp down, we are starting at top speed, and we decrease it bit by bit till speed gets to 0.<br><br>1. add in lines 30-36 to your rampForwardDown function<br>2. add in line 11 to call the rampForwardDown function after rampForward<br>",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_10.c"
         },{
@@ -1669,37 +1669,37 @@ var jsonMain = {
             "location": "http://www.youtube.com/embed/Lxg9GGzPm2k?rel=0&autoplay=1"
         },{
             "title": "Lesson 5-2-12: Task - Ramping Backward function",
-            "type": "txt",
+            "type": "text",
             "instruction": "So we have a function for ramping forward, we'll need to have a function for ramping when our robot moves backwards as well.<br><br>It's your turn!<br><br>Add in lines 32-34 in to your code. Complete the function for rampBackward.<br><br><b>Hint*</b>: look at your rampForward function as a guide!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_12.c"
         },{
             "title": "Lesson 5-2-13: Testing the rampBackward function",
-            "type": "txt",
+            "type": "text",
             "instruction": "Add the call to the rampBackward() function by adding line 12 to your code.<br><br>Run your program and test it out!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_13.c"
         },{
             "title": "Lesson 5-2-14: Task - Ramping Backward Down",
-            "type": "txt",
+            "type": "text",
             "instruction": "Now we will need to add a function for ramping backward down when we stop moving backwards.<br><br>It's your turn again!<br><br>Add in lines 48-50 in to your code. Complete the function for rampBackwardDown.<br><br><b>Hint*</b>: look at your rampForwardDown function as a guide!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_14.c"
         },{
             "title": "Lesson 5-2-15: Testing the rampBackwardDown function",
-            "type": "txt",
+            "type": "text",
             "instruction": "Add the call to the rampBackwardDown() function by adding line 13 to your code.<br><br>Run your program and test it out!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_15.c"
         },{
             "title": "Lesson 5-2-16: Turning left function",
-            "type": "txt",
+            "type": "text",
             "instruction": "Add a function to turn left!<br>The code for the turn function is on lines 50-61. <br><br>Try out different values for the duration variable to see which ones works the best!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_16.c"
         },{
             "title": "Lesson 5-2-17: Turning right function",
-            "type": "txt",
+            "type": "text",
             "instruction": "Write your own function for turning right!<br><br>The function is defined for you on lines 63-66. Use the turnLeft function as an example!",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_17.c"
         },{
             "title": "Lesson 5-2-18: Task - Move in a square function",
-            "type": "txt",
+            "type": "text",
             "instruction": "Let's move in a square again! It's your turn. You'll have to make a function called moveInSquare(int straightDelay).<br><br>It will have the following properties:<br><br>1. when this function is called, the robot will move in a square<br>2. when the robot moves straight, it uses the <b>delayGoingStraight</b> input as delay<br>3. use a for loop in your code<br>4. use the ramping functions you made when the robot starts, and stops<br>5. using the piezoelectric speaker, make a sound when the robot turns, and a different sound when it moves straight",
             "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_2_18.c"
         }
@@ -1708,9 +1708,15 @@ var jsonMain = {
     {
         "lesson_6": [{
             "title": "Testing",
-            "type": "img",
-            "instruction": "Welcome back everyone!<br><br>Today we will be adding some extra electronics part to our robot.<br><br>Click next to get started!",
-            "location": "https://s3-us-west-2.amazonaws.com/treeo/Arduino/Lesson_5/5_1_1.png"
-        }]
+            "type": "video",
+            "instruction": "Testing",
+            "location": "http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"
+        },{
+            "title": "Testing 2",
+            "type": "video",
+            "instruction": "Testing 2 ",
+            "location": "http://www.html5rocks.com/tutorials/video/basics/Chrome_ImF.mp4"
+        }
+        ]
     }]
 };

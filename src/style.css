@@ -1,4 +1,7 @@
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
     background-color: #6C7A89;
@@ -9,75 +12,98 @@ body {
 }
 
 .btnLarge {
-  width: 250px;
-}
-
-.rightSideButton {
-  position:absolute;
-  bottom:0px;
-  right:0px;
-}
-
-.leftSideButton {
-  position:absolute;
-  bottom:0px;
-  left:0px;
-}
-
-#btnStartEnd {
-  position:absolute;
-  bottom:0px;
-  left:0px;
-}
-
-#lessonContainer { 
-  width:1100px;
-  height:625px;
-  position:absolute;
-  left: 50%;
-  top: 45%;
-  margin: -275px 0 0 -550px;
-}
-
-
-#mediaContainer { 
-  width:800px;
-  height:450px;
-  position:absolute;
-  top:100px;
-}
-
-#mediaContainer img {
-    display:block;
-    max-width:100%;
-    max-height:100%;
-    margin:auto;
-}
-
-.navLessonContainer {
-  width:800px;
-  height:75px;
-  position:absolute;
-}
-
-.top {
-  top:0px;
-}
-
-.bottom {
-  bottom:0px;
+    width: 250px;
 }
 
 .btn-default-size {
   width: 175px;
 }
 
+
+#mediaContainer{
+  padding-left: 60px;
+}
+
+#instructionContainer{
+  padding-right: 80px;
+}
+
+
+#instructionContainer .instruction-header{
+  padding: 15px 10px 15px 15px;
+  background-color: #FFFFFF;
+}
+
+#instructionContainer .instruction-body{
+  padding: 30px 15px;
+  background-color: #C5EFF7;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+#lessonNavigationContainer{
+   padding-left: 40px;
+   padding-right: 15px;
+   margin-top: 20px
+}
+
+#videoSwitchContainer{
+  margin-bottom:10px;
+  text-align: right;
+}
+
+.label{
+  font-size:medium;
+}
+
+.lesson-media{
+    width:100%;
+    height:100%;
+}
+
+.dropdown{
+    text-align:center;
+}
+
+.navbar-nav {
+    width: 100%;
+    text-align: center;
+}
+
+.navbar-nav > li {
+    float: none;
+    display: inline-block;
+}
+
+.navbar-nav .dropdown {
+    margin-right:50px;
+}
+
+#navbarTitle{
+    font-size: large;
+    font-weight: bold;
+    color: #414141;
+}
+
+/*
+#navbarTitle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+    font-size: large;
+}
+*/
+
+/*
 .btn-navigation {
     width: 200px;
     margin: 10px 15px;
 }
 
-.navigation-panel { 
+.navigation-panel {
   width:800px;
   height:350px;
   position:absolute;
@@ -86,14 +112,7 @@ body {
   margin: -250px 0 0 -400px;
 }
 
-.instructionContainer {
-  background-color: #C5EFF7;
-  width:300px;
-  height:450px;
-  position:absolute;
-  left:825px;
-  top:100px;
-}
+
 
 .header{
   background-color: white;
@@ -109,10 +128,7 @@ body {
   font-weight: bold;
 }
 
-#instructionBox{
-  padding: 30px 15px;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-}
+
 
 .link-home{
   font-size: large;
@@ -140,9 +156,7 @@ body {
   top:50px;
 }
 
-.label{
-  font-size:medium;
-}
+
 
 
 
@@ -150,12 +164,8 @@ body {
   display: block;
   height: 13500px;
 }
-#v0 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+
 p font-family helvetica {
   font-size: 24px;
 }
+*/
