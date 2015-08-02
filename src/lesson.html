@@ -9,18 +9,22 @@
 	<link rel="stylesheet" href="bootstrap-switch.min.css">
 	<link rel="stylesheet" href="http://skidding.github.io/dragdealer/src/dragdealer.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" type="text/css" href="/css/fresco/fresco.css"/>
 </head>
 
 
 
 <body onresize="initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type])">
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+    <script src="https://raw.githubusercontent.com/alexei/sprintf.js/master/src/sprintf.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="common-utils.js"></script>
 	<script src="lessonJson.js"></script>
 	<script src="lesson.js"></script>
 	<script src="bootstrap-switch.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 	<script src="http://skidding.github.io/dragdealer/src/dragdealer.js"></script>
+	<script type="text/javascript" src="/js/fresco/fresco.js"></script>
 
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
@@ -42,10 +46,9 @@
                             <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
                     </li>
                     <li class="dropdown">
-                        <a id='navbarTitle' href="#" class="dropdown-toggle btn-lg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <a id='navbarTitle' class="dropdown-toggle btn-lg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             </a>
                         <ul id="lessonStepDropdown" class="dropdown-menu">
-
                         </ul>
                     </li>
                 </ul>
@@ -64,7 +67,7 @@
 		<div id="mediaContainer" class="col-sm-8">
 			<img id="imageDisplay" class="lesson-media" />
 			<div id="videoDisplay" class="lesson-media">
-                <video id="videoPlayer" tabindex="0" autobuffer="autobuffer" preload="preload" width="100%" >
+                <video id="videoPlayer" tabindex="0" preload="auto" width="100%" >
                     <source id="videoSrc" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />
                     <p>Sorry, your browser does not support the &lt;video&gt; element.</p>
                 </video>
@@ -97,6 +100,26 @@
 		</div>
 	</div>
 
+	<div class="modal fade modal-wide" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document" >
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Modal title</h4>
+				</div>
+				<div class="modal-body" >
+					<img id="imageDisplayModal" width="100%"/>
+					<div id="videoDisplayModal">
+						<video id="videoPlayerModal" tabindex="0" preload="none" width="100%" controls>
+							<source id="videoSrcModal" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />
+							<p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+						</video>
+					</div>
+					<iframe id="youtubeDisplayModal" class="lesson-media"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="http://cdn.jsdelivr.net/ace/1.2.0/min/ace.js" type="text/javascript" charset="utf-8"></script>
 	<script>

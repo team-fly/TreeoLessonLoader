@@ -19,7 +19,6 @@ body {
   width: 175px;
 }
 
-
 #mediaContainer{
   padding-left: 60px;
 }
@@ -27,7 +26,6 @@ body {
 #instructionContainer{
   padding-right: 80px;
 }
-
 
 #instructionContainer .instruction-header{
   padding: 15px 10px 15px 15px;
@@ -84,88 +82,23 @@ body {
     color: #414141;
 }
 
-/*
-#navbarTitle{
-    position: absolute;
+.navigation-panel {
+    width:800px;
+    height:350px;
+    position:absolute;
+    left: 50%;
     top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    text-align: center;
-    margin: auto;
-    font-weight: bold;
-    font-size: large;
+    margin: -250px 0 0 -400px;
 }
-*/
 
-/*
 .btn-navigation {
     width: 200px;
     margin: 10px 15px;
 }
 
-.navigation-panel {
-  width:800px;
-  height:350px;
-  position:absolute;
-  left: 50%;
-  top: 50%;
-  margin: -250px 0 0 -400px;
+.modal.modal-wide .modal-dialog {
+    width: 90%;
 }
-
-
-
-.header{
-  background-color: white;
-  width:300px;
-  height:50px;
-  text-align:center;
+.modal-wide .modal-body {
+    overflow-y: auto;
 }
-
-.title{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  font-weight: bold;
-}
-
-
-
-.link-home{
-  font-size: large;
-}
-
-.vertical-aligned{
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#navbar-title{
-    position: absolute;
-    width: 100%;
-    left: 0;
-    text-align: center;
-    margin: auto;
-    font-weight: bold;
-    font-size: large;
-}
-
-#switchContainer{
-  position:absolute;
-  right:300px;
-  top:50px;
-}
-
-
-
-
-
-#set-height {
-  display: block;
-  height: 13500px;
-}
-
-p font-family helvetica {
-  font-size: 24px;
-}
-*/

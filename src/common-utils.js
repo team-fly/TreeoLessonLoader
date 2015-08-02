@@ -19,3 +19,10 @@ function downloadFromAjax(textFileUrl){
     
     return null;
 }
+
+function appendListItem(listId, listItemLabel){
+    if(!dropdownList.hasOwnProperty(listItemLabel)){
+        dropdownList[listItemLabel]=true;
+        $(listId).append(sprintf('<li><a>%s</a></li>',listItemLabel));
+    };
+}
