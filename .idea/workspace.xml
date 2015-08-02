@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="740ce9fb-b5dd-488b-988e-c07577505f01" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common-utils.js" afterPath="$PROJECT_DIR$/src/common-utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson.html" afterPath="$PROJECT_DIR$/src/lesson.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson.js" afterPath="$PROJECT_DIR$/src/lesson.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lessonJson.js" afterPath="$PROJECT_DIR$/src/lessonJson.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/navigation.html" afterPath="$PROJECT_DIR$/src/navigation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style.css" afterPath="$PROJECT_DIR$/src/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TreeoLessonLoader.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,13 +23,13 @@
     <favorites_list name="TreeoLessonLoader" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4">
+    <splitter split-orientation="horizontal" split-proportion="0.44018817">
       <split-first>
         <leaf>
-          <file leaf-file-name="lesson.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="lesson.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lesson.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
+                <state vertical-scroll-proportion="1.7950481">
                   <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
                   <folding />
                 </state>
@@ -54,11 +48,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+          <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.9382716">
-                  <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -72,7 +66,7 @@
             <entry file="file://$PROJECT_DIR$/src/lessonJson.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.0">
-                  <caret line="1448" column="36" selection-start-line="1448" selection-start-column="36" selection-end-line="1448" selection-end-column="36" />
+                  <caret line="1696" column="25" selection-start-line="1696" selection-start-column="21" selection-end-line="1696" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
@@ -81,8 +75,8 @@
           <file leaf-file-name="lesson.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lesson.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5531915">
-                  <caret line="112" column="81" selection-start-line="112" selection-start-column="81" selection-end-line="112" selection-end-column="94" />
+                <state vertical-scroll-proportion="0.4694168">
+                  <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
                   <folding />
                 </state>
               </provider>
@@ -129,8 +123,8 @@
         <option value="$PROJECT_DIR$/src/lessonJson.js" />
         <option value="$PROJECT_DIR$/src/navigation.html" />
         <option value="$PROJECT_DIR$/src/lesson.js" />
-        <option value="$PROJECT_DIR$/src/lesson.html" />
         <option value="$PROJECT_DIR$/src/style.css" />
+        <option value="$PROJECT_DIR$/src/lesson.html" />
       </list>
     </option>
   </component>
@@ -142,8 +136,8 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="57" />
-    <option name="y" value="78" />
+    <option name="x" value="155" />
+    <option name="y" value="198" />
     <option name="width" value="1703" />
     <option name="height" value="873" />
   </component>
@@ -585,15 +579,15 @@
       <updated>1438225976068</updated>
       <workItem from="1438225977771" duration="3017000" />
       <workItem from="1438303129752" duration="11806000" />
-      <workItem from="1438386126320" duration="4688000" />
+      <workItem from="1438386126320" duration="5231000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19511000" />
+    <option name="totallyTimeSpent" value="20054000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="78" width="1703" height="873" extended-state="0" />
+    <frame x="155" y="198" width="1703" height="873" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -776,34 +770,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/lessonJson.js">
+    <entry file="file://$PROJECT_DIR$/src/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="1448" column="36" selection-start-line="1448" selection-start-column="36" selection-end-line="1448" selection-end-column="36" />
+          <caret line="84" column="19" selection-start-line="84" selection-start-column="19" selection-end-line="84" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="1.7950481">
           <caret line="87" column="40" selection-start-line="87" selection-start-column="40" selection-end-line="87" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/lessonJson.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1696" column="25" selection-start-line="1696" selection-start-column="21" selection-end-line="1696" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5531915">
-          <caret line="112" column="81" selection-start-line="112" selection-start-column="81" selection-end-line="112" selection-end-column="94" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9382716">
-          <caret line="103" column="1" selection-start-line="103" selection-start-column="1" selection-end-line="103" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.4694168">
+          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
           <folding />
         </state>
       </provider>
