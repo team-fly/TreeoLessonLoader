@@ -2,7 +2,7 @@
                 
     session_start();
     /* --- The AND only logs out if already logged in (has a session id) --- */
-    if($_GET['logout']==1 AND $_SESSION['id'])  {
+    if(($_GET['logout']==1 AND $_SESSION['id']) OR ($_SESSION['timeout'] + 15) > time())  { //check for session timeout = 60 mins
         session_destroy();
         $msg = "You have logged out";
     }
@@ -23,8 +23,13 @@
       if($row) {
           $_SESSION['id']=$row['id'];
           
+          /* ---Session Timeout--- */
+          $_SESSION['timeout']=time();
+          /* ---Session Timeout--- */          
+          
+          
           /* ---Redirect page below--- */
-          header("Location: redirect.php");
+          header("Location: navigation.php");
           exit();
           /* ---Redirect page above--- */
           

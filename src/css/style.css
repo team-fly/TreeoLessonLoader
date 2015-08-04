@@ -18,3 +18,14 @@ body {
 	background-color: darkgreen;
 }
 
+.mascot {
+	height: 100px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mascot img {
+	width: 100%;
+	height: auto;
+}

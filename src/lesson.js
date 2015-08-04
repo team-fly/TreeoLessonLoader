@@ -1,5 +1,5 @@
 /// <reference path="../typings/jquery/jquery.d.ts"/>
-var NAVIGATION_URL="navigation.html";
+var NAVIGATION_URL="navigation.php";
 var LESSON_START_IMG_URL="https://s3-us-west-2.amazonaws.com/treeo/ImgStartLesson.jpg";
 var LESSON_END_IMG_URL="https://s3-us-west-2.amazonaws.com/treeo/ImgLessonCompleted.jpg";
 

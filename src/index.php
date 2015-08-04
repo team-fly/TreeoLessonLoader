@@ -30,11 +30,15 @@
             <? include("login.php"); ?>
             
             <div class="container">
+                <div class="row mascot">
+                    <img src="img/mascot.png">
+                </div>
+                <div class="row">
                   <form class="form-signin" method="post">
                       
                         <div class="form-group">
-                            <h2 class="form-signin-heading">Welcome to Treeo!</h2>
-                            <h4 class="form-signin-heading">Please sign in</h2>
+                            <h2 class="form-signin-heading text-center">Welcome to Treeo!</h2>
+                            <h4 class="form-signin-heading text-center">Please sign in</h2>
                         </div>
                         
                         <div class="form-group">
@@ -71,7 +75,7 @@
                       
                   ?>
                   </form>
-
+              </div> <!-- /form row -->
             </div> <!-- /container -->
 
 

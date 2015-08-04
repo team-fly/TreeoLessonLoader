@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    include("connection.php");
+    
+    if($_SESSION['id'] AND (($_SESSION['timeout'] + 15) > time())) {	//check for session timeout = 15 seconds
+        $_SESSION['timeout']=time();
+		//Welcome user
+    } else {
+        echo "please log in first";
+        header("Location: index.php");
+        exit();
+    }
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,6 +30,18 @@
 
 </head>
 <body>
+	<!-- navbar with logout -->
+	<div class="navbar navbar-default" id="navigationBar">
+            <div class="container">
+                <div class="pull-right">
+                    <ul class="navbar-nav nav">
+                        <li><a href="index.php?logout=1">Log Out</a></li>
+                    </ul>
+                </div> 
+            </div>
+        </div>
+	<!-- navbar with logout -->
+		
 <div id="navigationContainer" class="navigation-panel">
 	<a id="nav_scratch" class="btn btn-info btn-lg btn-navigation" ><span class="glyphicon glyphicon-folder-open"></span> Scratch</a>
 	<a id="nav_arduino" class="btn btn-info btn-lg btn-navigation" ><span class="glyphicon glyphicon-folder-open"></span> Arduino</a>
