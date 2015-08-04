@@ -90,7 +90,6 @@ var main =function(){
         $(this).find(".modal-body").css("max-height", height);
     });
 
-
 };
 
 
@@ -110,8 +109,24 @@ function loadResource(){
       //TODO: check if jquery selector works
         videoSrc.setAttribute('src', json[index].location);
         videoPlayer.load();
-        $("#videoDisplay").show();
-        initiateSlider();
+
+        document.getElementById('videoPlayer').addEventListener('loadedmetadata', function() {
+            initializeInstructionBoxHeight("#videoPlayer");
+            $("#videoDisplay").show();
+            $("#videoPlayer").get(0).play();
+
+        });
+
+
+
+        var dragDealerInitiated=false;
+
+        $('#videoPlayer').on('ended',function(){
+            if(!dragDealerInitiated){
+                initiateDragDealer();
+                dragDealerInitiated=true;
+            }
+        });
 
         $("#videoSrcModal").attr('src', json[index].location);
         $("#videoPlayerModal").load();
@@ -138,18 +153,30 @@ function initializeInstructionBoxHeight(divId){
     $(".instruction-body").height(getHeight(divId)-112);
 }
 
-function initiateSlider(){
-  
+function initiateDragDealer(){
+    $("#videoSlider").show();
+
+
+    document.getElementById('videoPlayer').pause();
+    var duration=document.getElementById('videoPlayer').duration;
+    new Dragdealer('videoSlider', {
+        animationCallback: function(x, y) {
+            document.getElementById('videoPlayer').currentTime=(x*duration).toFixed(6);
+            $('#videoSliderValue').text((x*duration).toFixed(2));
+        }
+    });
+    /*
   document.getElementById('videoPlayer').addEventListener('loadedmetadata', function() {
     this.pause();
     var duration=this.duration;
     new Dragdealer('videoSlider', {
       animationCallback: function(x, y) {
-        document.getElementById('videoPlayer').currentTime=x*duration;
-          $('#videoSliderValue').text(Math.round(x * 100)+"%");
+        document.getElementById('videoPlayer').currentTime=(x*duration).toFixed(5);
+          $('#videoSliderValue').text((x*duration).toFixed(2));
       }
     });
   });
+  */
 }
 
 function loadLessonIntoJsonObj(){
@@ -166,6 +193,7 @@ function hideAllMediaElements(){
     $("#youtubeDisplay").hide();
     $("#imageDisplay").hide();
     $("#videoDisplay").hide();
+    $("#videoSlider").hide();
 
     $("#youtubeDisplayModal").hide();
     $("#imageDisplayModal").hide();
