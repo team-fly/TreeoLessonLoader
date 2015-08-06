@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    include("connection.php");
+    
+    if($_SESSION['id'] AND (($_SESSION['timeout'] + 15) > time())) {	//check for session timeout = 15 seconds
+        $_SESSION['timeout']=time();
+        //Welcome user
+    } else {
+        echo "please log in first";
+        header("Location: index.php");
+        exit();
+    }
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +20,6 @@
 
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="bootstrap-switch.min.css">
 	<link rel="stylesheet" href="http://skidding.github.io/dragdealer/src/dragdealer.css">
 	<link rel="stylesheet" href="style.css">
@@ -15,15 +28,15 @@
 
 
 <body onresize="initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type])">
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="https://s3-us-west-2.amazonaws.com/treeo/resources/sprintf.js"></script>
+
+    <script src="https://raw.githubusercontent.com/alexei/sprintf.js/master/src/sprintf.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="common-utils.js"></script>
 	<script src="lessonJson.js"></script>
-	<script src="https://s3-us-west-2.amazonaws.com/treeo/resources/dragdealer.js"></script>
 	<script src="lesson.js"></script>
-
-
+	<script src="bootstrap-switch.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="http://skidding.github.io/dragdealer/src/dragdealer.js"></script>
 
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
@@ -44,28 +57,31 @@
                         <button id="btn-nav-home" type="button" class="btn btn-default btn-lg navbar-btn">
                             <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
                     </li>
+						
                     <li class="dropdown">
                         <a id='navbarTitle' class="dropdown-toggle btn-lg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             </a>
                         <ul id="lessonStepDropdown" class="dropdown-menu">
                         </ul>
                     </li>
+						
+					<li class="pull-right">
+						<a href="index.php?logout=1">Log Out</a>
+					</li>
                 </ul>
             </div><!-- /.navbar-collapse -->
         </div><!-- /.container-fluid -->
     </nav>
 
-	<div id="lessonStepContainer" class="row">
-        <div id="loadingDisplay" class="text-center">
-            <div class="row">
-                <i id="loadingIcon" class="fa fa-circle-o-notch fa-spin"></i>
-            </div>
-            <div class="row">
-                <span class="loading">Loading...</span>
-            </div>
-        </div>
-		<div id="mediaContainer" class="col-sm-8">
 
+    <div class="row">
+		<div id="videoSwitchContainer" class="col-sm-3 col-sm-offset-5">
+			<span id='labelVideoMode' class='label'>Auto Loop</span>
+			<input  id="switchVideoMode" type="checkbox" >
+		</div>
+	</div>
+	<div id="lessonStepContainer" class="row">
+		<div id="mediaContainer" class="col-sm-8">
 			<img id="imageDisplay" class="lesson-media" />
 			<div id="videoDisplay" class="lesson-media">
                 <video id="videoPlayer" tabindex="0" preload="auto" width="100%" >
@@ -85,11 +101,12 @@
 			<div class="row instruction-header">
 				<span class="title h4">Instruction</span>
 			</div>
-			<div class="row instruction-body" >Sample Text</div>
+			<div class="row instruction-body">Sample Text</div>
 		</div>
 	</div>
 	<div class="row" id="lessonNavigationContainer" >
 		<div class="col-sm-8">
+			<button id="btnStartEnd" class="btn btn-success btn-lg btn-block" type="submit">Next</button>
 
 	  		<div class="leftSideButton">
 	  			<button id="btnPrev" class="btn btn-info btn-lg btn-default-size pull-left" type="submit" >Previous</button>
@@ -121,11 +138,11 @@
 		</div>
 	</div>
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.2.0/ace.js" type="text/javascript" charset="utf-8"></script>
+	<script src="http://cdn.jsdelivr.net/ace/1.2.0/min/ace.js" type="text/javascript" charset="utf-8"></script>
 	<script>
-		var editor = ace.edit("textDisplay");
-		editor.setTheme("ace/theme/monokai");
-		editor.getSession().setMode("ace/mode/c_cpp");
+	    var editor = ace.edit("editor");
+	    editor.setTheme("ace/theme/monokai");
+	    editor.getSession().setMode("ace/mode/c_cpp");
 		editor.setReadOnly(true);
 	</script>
 </body>
