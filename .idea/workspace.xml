@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="740ce9fb-b5dd-488b-988e-c07577505f01" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/lessonJson.js" afterPath="$PROJECT_DIR$/src/lessonJson.js-legacy" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/lessonJson.js-legacy.js" afterPath="$PROJECT_DIR$/src/lessonJson.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/common-utils.js" afterPath="$PROJECT_DIR$/src/common-utils.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson.html" afterPath="$PROJECT_DIR$/src/lesson.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/lesson.js" afterPath="$PROJECT_DIR$/src/lesson.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/navigation.html" afterPath="$PROJECT_DIR$/src/navigation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/style.css" afterPath="$PROJECT_DIR$/src/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -56,8 +51,8 @@
           <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.35470086">
-                  <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+                <state vertical-scroll-proportion="0.31623933">
+                  <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -70,9 +65,11 @@
           <file leaf-file-name="lesson.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/lesson.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.5319149">
-                  <caret line="98" column="83" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="83" />
-                  <folding />
+                <state vertical-scroll-proportion="0.5744681">
+                  <caret line="101" column="122" selection-start-line="101" selection-start-column="122" selection-end-line="101" selection-end-column="122" />
+                  <folding>
+                    <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -599,12 +596,12 @@
       <workItem from="1438816908911" duration="8967000" />
       <workItem from="1438907464738" duration="5532000" />
       <workItem from="1438988047550" duration="5004000" />
-      <workItem from="1439079510889" duration="5085000" />
+      <workItem from="1439079510889" duration="5421000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59700000" />
+    <option name="totallyTimeSpent" value="60036000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
@@ -728,7 +725,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -785,7 +784,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -842,7 +843,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -899,7 +902,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -949,7 +954,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -991,7 +998,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="40" column="41" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="41" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1031,7 +1040,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1088,16 +1099,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/lesson.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5319149">
-          <caret line="98" column="83" selection-start-line="98" selection-start-column="74" selection-end-line="98" selection-end-column="83" />
-          <folding />
+        <state vertical-scroll-proportion="0.5744681">
+          <caret line="101" column="122" selection-start-line="101" selection-start-column="122" selection-end-line="101" selection-end-column="122" />
+          <folding>
+            <element signature="n#style#0;n#button#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35470086">
-          <caret line="126" column="19" selection-start-line="126" selection-start-column="19" selection-end-line="126" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.31623933">
+          <caret line="124" column="0" selection-start-line="124" selection-start-column="0" selection-end-line="124" selection-end-column="0" />
           <folding />
         </state>
       </provider>
