@@ -21,14 +21,20 @@ body {
 }
 
 .navbar {
+    position:absolute;
+    width:100%;
     margin-bottom: 0;
     margin-top:0;
+    z-index:10;
 }
 
 #lessonStepContainer{
+    width:100%;
     position: absolute;
     bottom:50px;
     top:65px;
+    padding-left:0px;
+    padding-right:0px;
 }
 
 #mediaContainer{
@@ -55,7 +61,7 @@ body {
 }
 
 #instructionContainer .instruction-body{
-    height: 100%;
+  height: 100%;
   padding: 15px 40px 15px 15px;
   background-color: #C5EFF7;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
@@ -86,10 +92,6 @@ body {
     /*z-index:1;*/
 }
 
-.navbar-fixed-bottom{
-    z-index:-1;
-}
-
 .dropdown{
     text-align:center;
 }
@@ -97,15 +99,22 @@ body {
 .navbar-nav {
     width: 100%;
     text-align: center;
+    z-index:10;
+}
+
+#lessonStepDropdown{
+    z-index:10;
 }
 
 .navbar-nav > li {
     float: none;
     display: inline-block;
+    z-index:10;
 }
 
 .navbar-nav .dropdown {
     margin-right:80px;
+    z-index:10;
 }
 
 #navbarTitle{
@@ -145,6 +154,11 @@ body {
 .loading{
     font-size: 3em;
     color:white;
+}
+
+.btn-navigation {
+    width: 200px;
+    margin: 10px 15px;
 }
 
 
