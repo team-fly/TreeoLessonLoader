@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -19,12 +20,33 @@ body {
   width: 175px;
 }
 
+.navbar {
+    margin-bottom: 0;
+    margin-top:0;
+}
+
+#lessonStepContainer{
+    position: absolute;
+    bottom:50px;
+    top:65px;
+}
+
 #mediaContainer{
-  padding-left: 60px;
+    background-color: #000000;
+    height:100%;
+    margin-right:0;
+    margin-left:0;
+    padding-right:0;
+    padding-left:0;
 }
 
 #instructionContainer{
-  padding-right: 80px;
+    height:100%;
+    margin-right:0;
+    margin-left:0;
+    padding-right:0;
+    padding-left:15px;
+    padding-bottom: 50px;
 }
 
 #instructionContainer .instruction-header{
@@ -33,20 +55,26 @@ body {
 }
 
 #instructionContainer .instruction-body{
-  padding: 30px 15px;
+    height: 100%;
+  padding: 15px 40px 15px 15px;
   background-color: #C5EFF7;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+
 #lessonNavigationContainer{
-   padding-left: 40px;
-   padding-right: 15px;
-   margin-top: 20px
+    background-color: whitesmoke;
+    width:102%;
+    margin-right:0;
+    margin-left:0;
+    padding-right:0;
+    padding-left:0;
+    height: 50px;
 }
 
-#videoSwitchContainer{
-  margin-bottom:10px;
-  text-align: right;
+.footer{
+    position: fixed;
+    bottom: 0;
 }
 
 .label{
@@ -54,9 +82,12 @@ body {
 }
 
 .lesson-media{
-    width:100%;
-    height:100%;
-    z-index:1;
+    position:relative;
+    /*z-index:1;*/
+}
+
+.navbar-fixed-bottom{
+    z-index:-1;
 }
 
 .dropdown{
@@ -93,12 +124,11 @@ body {
 }
 
 .btn-navigation {
-    width: 200px;
-    margin: 10px 15px;
+    margin: 10px 25px;
 }
 
 .modal.modal-wide .modal-dialog {
-    width: 90%;
+    width: 80%;
 }
 .modal-wide .modal-body {
     overflow-y: auto;

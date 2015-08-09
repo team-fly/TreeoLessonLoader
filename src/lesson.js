@@ -11,13 +11,14 @@ var MediaTypeIdNVP = {
 var index=0;
 var dropdownList=[];
 var json=loadLessonIntoJsonObj();
+var $mediaContainer;
 
 var main =function(){
-
+    $mediaContainer=document.getElementById("mediaContainer");
     $("#loadingDisplay").hide();
 
     hideAllMediaElements();
-    loadResource();
+     loadResource();
 
     $("#btnPrev").addClass("disabled");
 
@@ -63,26 +64,41 @@ var main =function(){
 
 
 function loadResource(){
-    $("#loadingDisplay").fadeIn("fast");
+    $("#loadingDisplay").fadeIn("slow");
   appendListItem("#lessonStepDropdown", json[index].title);
   hideAllMediaElements();
 
     $("#instructionContainer .instruction-body").html(json[index].instruction);
 
   switch (json[index].type) {
-    case "image":
-        $("#imageDisplay").attr("src", json[index].location).add("#lessonNavigationContainer").fadeIn("fast");
-        $("#imageDisplayModal").attr("src", json[index].location).show();
-        initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type]);
+      case "image":
+        //$("#imageDisplay").attr("src", json[index].location);
+
+          $("#imageDisplay").load(function() {
+              $("#imageDisplay").fadeIn("slow");
+              autoSetHeightWidth();
+
+          }).attr("src", json[index].location);
+
+
+
+
+         /*
+        var loadImage = new Image();
+        loadImage.src =  $("#imageDisplay").attr('src');
+        loadImage.onLoad = function(){
+            autoSetHeightWidth();
+            $("#imageDisplay").fadeIn("fast");
+        };
+        */
         break;
     case "video":
         $("#videoSrc").attr('src', json[index].location);
         $("#videoPlayer").get(0).load();
 
         $("#videoPlayer").get(0).addEventListener('loadedmetadata', function() {
-            $( "#videoDisplay").fadeIn( "fast", function() {
-                initializeInstructionBoxHeight("#videoPlayer");
-            });
+            autoSetHeightWidth();
+            $( "#videoDisplay").fadeIn( "fast");
         });
 
         $("#videoPlayer").get(0).play();
@@ -96,24 +112,20 @@ function loadResource(){
             }
         });
 
-        $("#videoSrcModal").attr('src', json[index].location);
-        $("#videoPlayerModal").load();
-        $("#videoDisplayModal").show();
         break;
     case "youtube":
-        $("#youtubeDisplay").attr("src", json[index].location).add("#lessonNavigationContainer").fadeIn("fast");
-        $("#youtubeDisplayModal").attr("src", json[index].location).show();
-        initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type]);
+        $("#youtubeDisplay").attr("src", json[index].location);
+        autoSetHeightWidth();
+        $("#youtubeDisplay").fadeIn("fast");
         break;
     case "text":
         editor.setValue("TEST"/*downloadFromAjax(json[index].location)*/);
         $("#textDisplay").add("#lessonNavigationContainer").fadeIn("fast");
-        initializeInstructionBoxHeight(MediaTypeIdNVP[json[index].type]);
         break;
   }
 
+    $("#instructionContainer").add("#lessonNavigationContainer").fadeIn("fast");
     $("#navbarTitle").html(json[index].title+"<span class='caret'></span>");
-
 }
 
 function initializeInstructionBoxHeight(divId){
@@ -158,6 +170,38 @@ function hideAllMediaElements(){
 
     $("#instructionContainer").hide();
 }
+
+
+function autoSetHeightWidth(){
+    var element;
+    var mediaContainerHxWRatio=$mediaContainer.clientHeight/$mediaContainer.clientWidth;
+
+    switch (json[index].type) {
+        case "image":
+            element=$("#imageDisplay").get(0);
+            if((element.naturalHeight/element.naturalWidth) > mediaContainerHxWRatio){
+                var offset=parseInt(($mediaContainer.clientWidth-element.naturalWidth*($mediaContainer.clientHeight/element.naturalHeight))/2, 10);
+                $("#imageDisplay").css("left",String(offset)+"px").css("top", "0px").css("width", "").css("height", "100%");
+                //$("#imageDisplay").css("width", "").css("height", "100%");
+            }else{
+                var offset=parseInt(($mediaContainer.clientHeight-element.naturalHeight*($mediaContainer.clientWidth/element.naturalWidth))/2, 10);
+                $("#imageDisplay").css("top",String(offset)+"px").css("left","0px").css("height", "").css("width", "100%");
+                //$("#imageDisplay").css("height", "").css("width", "100%");
+            }
+            break;
+        case "video":
+            element=$("#videoPlayer").get(0);
+            if((element.videoHeight/element.videoWidth) > mediaContainerHxWRatio){
+                var offset=parseInt(($mediaContainer.clientWidth-element.videoWidth)/2, 10);
+                $("#videoPlayer").css("left",String(offset)+"px").css("top", "0px").css("width", "").css("height", "100%");
+            }else{
+                var offset=parseInt(($mediaContainer.clientHeight-element.videoHeight)/2, 10);
+                $("#videoPlayer").css("top",String(offset)+"px").css("left","0px").css("height", "").css("width", "100%");
+            }
+            break;
+    }
+}
+
 
 
 $(document).ready(main);
