@@ -26,3 +26,4 @@ function appendListItem(listId, listItemLabel){
         $(listId).append(sprintf('<li><a>%s</a></li>',listItemLabel));
     };
 }
+

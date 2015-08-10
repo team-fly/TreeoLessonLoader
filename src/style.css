@@ -1,6 +1,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 body {
@@ -19,12 +20,39 @@ body {
   width: 175px;
 }
 
+.navbar {
+    position:absolute;
+    width:100%;
+    margin-bottom: 0;
+    margin-top:0;
+    z-index:10;
+}
+
+#lessonStepContainer{
+    width:100%;
+    position: absolute;
+    bottom:50px;
+    top:65px;
+    padding-left:0px;
+    padding-right:0px;
+}
+
 #mediaContainer{
-  padding-left: 60px;
+    background-color: #000000;
+    height:100%;
+    margin-right:0;
+    margin-left:0;
+    padding-right:0;
+    padding-left:0;
 }
 
 #instructionContainer{
-  padding-right: 80px;
+    height:100%;
+    margin-right:0;
+    margin-left:0;
+    padding-right:0;
+    padding-left:15px;
+    padding-bottom: 50px;
 }
 
 #instructionContainer .instruction-header{
@@ -33,20 +61,26 @@ body {
 }
 
 #instructionContainer .instruction-body{
-  padding: 30px 15px;
+  height: 100%;
+  padding: 15px 40px 15px 15px;
   background-color: #C5EFF7;
   font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
+
 #lessonNavigationContainer{
-   padding-left: 40px;
-   padding-right: 15px;
-   margin-top: 20px
+    background-color: whitesmoke;
+    width:102%;
+    margin-right:0;
+    margin-left:0;
+    padding-right:0;
+    padding-left:0;
+    height: 50px;
 }
 
-#videoSwitchContainer{
-  margin-bottom:10px;
-  text-align: right;
+.footer{
+    position: fixed;
+    bottom: 0;
 }
 
 .label{
@@ -54,8 +88,8 @@ body {
 }
 
 .lesson-media{
-    width:100%;
-    height:100%;
+    position:relative;
+    /*z-index:1;*/
 }
 
 .dropdown{
@@ -65,15 +99,22 @@ body {
 .navbar-nav {
     width: 100%;
     text-align: center;
+    z-index:10;
+}
+
+#lessonStepDropdown{
+    z-index:10;
 }
 
 .navbar-nav > li {
     float: none;
     display: inline-block;
+    z-index:10;
 }
 
 .navbar-nav .dropdown {
-    margin-right:50px;
+    margin-right:80px;
+    z-index:10;
 }
 
 #navbarTitle{
@@ -91,14 +132,33 @@ body {
     margin: -250px 0 0 -400px;
 }
 
+.modal.modal-wide .modal-dialog {
+    width: 80%;
+}
+.modal-wide .modal-body {
+    overflow-y: auto;
+}
+
+#loadingDisplay{
+    width: 100%;
+    position:absolute;
+    top:200px;
+    z-index:-1;
+}
+
+#loadingDisplay .fa-circle-o-notch{
+    font-size: 10em;
+    color:white;
+}
+
+.loading{
+    font-size: 3em;
+    color:white;
+}
+
 .btn-navigation {
     width: 200px;
     margin: 10px 15px;
 }
 
-.modal.modal-wide .modal-dialog {
-    width: 90%;
-}
-.modal-wide .modal-body {
-    overflow-y: auto;
-}
+

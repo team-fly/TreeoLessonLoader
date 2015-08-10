@@ -7,6 +7,9 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="dragdealer" level="application" />
+    <orderEntry type="library" name="ace" level="application" />
+    <orderEntry type="library" name="sprintf" level="application" />
+    <orderEntry type="library" name="jquery-latest" level="application" />
   </component>
   <component name="org.twodividedbyzero.idea.findbugs">
     <option name="_basePreferences">
