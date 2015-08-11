@@ -192,11 +192,17 @@ function autoSetHeightWidth(){
         case "video":
             element=$("#videoPlayer").get(0);
             if((element.videoHeight/element.videoWidth) > mediaContainerHxWRatio){
-                var offset=parseInt(($mediaContainer.clientWidth-element.videoWidth)/2, 10);
-                $("#videoPlayer").css("left",String(offset)+"px").css("top", "0px").css("width", "").css("height", "100%");
+                var offset=parseInt(($mediaContainer.clientWidth-element.width)/2, 10);
+
+                $("#videoDisplay").css("width", "").css("height", "100%").css("left",String(offset)+"px").css("top", "0px");
+                $("#videoPlayer").css("width", "").css("height", "100%");
             }else{
                 var offset=parseInt(($mediaContainer.clientHeight-element.videoHeight)/2, 10);
-                $("#videoPlayer").css("top",String(offset)+"px").css("left","0px").css("height", "").css("width", "100%");
+
+                $("#videoDisplay").css("height", "").css("width", "100%").css("left",String(offset)+"px").css("top", "0px");
+                $("#videoPlayer").css("height", "").css("width", "100%");
+
+                //$("#videoDisplay").css("top",String(offset)+"px").css("left","0px").css("height", "").css("width", "100%");
             }
             break;
     }
