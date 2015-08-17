@@ -9,6 +9,7 @@ var MediaTypeIdNVP = {
 
 var dragDealerVisible=false;
 
+
 var index=0;
 var dropdownList=[];
 var json=loadLessonIntoJsonObj();
@@ -61,6 +62,8 @@ var main =function(){
         $(this).find(".modal-body").css("max-height", height);
     });
 
+    $('#videoPlayIcon').on('click', playVideo);
+
 };
 
 
@@ -86,10 +89,12 @@ function loadResource(){
 
             $("#videoPlayer").get(0).addEventListener('loadedmetadata', function() {
                 autoSetHeightWidth();
-                $( "#videoDisplay").fadeIn( "fast");
+                $("#videoDisplay").fadeIn( "fast");
+                $("#videoPlayIcon").show();
+
             });
 
-            $("#videoPlayer").get(0).play();
+              $('#videoPlayIcon').on('click', playVideo);
 
             var dragDealerInitiated=false;
             $('#videoPlayer').on('ended',function(){
@@ -116,6 +121,10 @@ function loadResource(){
     $("#navbarTitle").html(json[index].title+"<span class='caret'></span>");
 }
 
+function playVideo(){
+    $("#videoPlayIcon").fadeOut("fast");
+    $("#videoPlayer").get(0).play();
+}
 
 function initiateDragDealer(){
     $("#videoSlider").show();
@@ -126,7 +135,7 @@ function initiateDragDealer(){
     new Dragdealer('videoSlider', {
         animationCallback: function(x, y) {
             document.getElementById('videoPlayer').currentTime=(x*duration).toFixed(6);
-            $('#videoSliderValue').text((x*duration).toFixed(2));
+            $('#videoSliderValue').text((x*duration).toFixed(2)+"s");
         }
     });
 }
@@ -166,11 +175,9 @@ function autoSetHeightWidth(){
             if((element.naturalHeight/element.naturalWidth) > mediaContainerHxWRatio){
                 var offset=parseInt(($mediaContainer.clientWidth-element.naturalWidth*($mediaContainer.clientHeight/element.naturalHeight))/2, 10);
                 $("#imageDisplay").css("left",String(offset)+"px").css("top", "0px").css("width", "").css("height", "100%");
-                //$("#imageDisplay").css("width", "").css("height", "100%");
             }else{
                 var offset=parseInt(($mediaContainer.clientHeight-element.naturalHeight*($mediaContainer.clientWidth/element.naturalWidth))/2, 10);
                 $("#imageDisplay").css("top",String(offset)+"px").css("left","0px").css("height", "").css("width", "100%");
-                //$("#imageDisplay").css("height", "").css("width", "100%");
             }
             break;
         case "video":
@@ -180,13 +187,8 @@ function autoSetHeightWidth(){
             var elementVideoHeight=element.videoHeight+(dragDealerVisible ? 1 : 0)*35;
 
             if((elementVideoHeight/element.videoWidth) > mediaContainerHxWRatio){
-
                 var newVideoWidth=parseInt(($mediaContainer.clientHeight/elementVideoHeight)*element.videoWidth,10);
-                //if(dragDealerVisible){
                 $("#videoPlayer").css("width", String(newVideoWidth)).css("height",String($mediaContainer.clientHeight-(dragDealerVisible ? 1 : 0)*35));
-                //}else{
-                    //$("#videoPlayer").css("width", String(newVideoWidth)).css("height",String($mediaContainer.clientHeight));
-                //}
 
                 var offset=parseInt(($mediaContainer.clientWidth-newVideoWidth)/2, 10);
 
@@ -204,8 +206,23 @@ function autoSetHeightWidth(){
 
                 $("#videoDisplay").css("left","0px").css("top", String(offset)+"px");
             }
+            CenterInsideDiv($("#videoPlayIcon").parent(), $("#videoPlayIcon"));
             break;
     }
+}
+
+function CenterInsideDiv(divContainer,elementToCenter) {
+    var divContainerHeight = divContainer.height();
+    var elementToCenterHeight = elementToCenter.outerHeight();
+
+    var divContainerWidth = divContainer.width();
+    var elementToCenterWidth = elementToCenter.outerWidth();
+
+    var elementNewTop = divContainerHeight / 2 - elementToCenterHeight / 2;
+    var elementNewLeft = divContainerWidth / 2 - elementToCenterWidth / 2;
+
+
+    elementToCenter.css({ top: elementNewTop, left: elementNewLeft });
 }
 
 $(document).ready(main);

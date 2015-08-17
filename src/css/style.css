@@ -1,0 +1,31 @@
+html {
+	background-color: #87c878;	
+	height: 100%;
+	width: 100%;
+}
+
+body {
+	background-color: #87c878;
+	position: relative;
+	top: 150px;
+}
+
+.form-signin {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#signinBtn {
+	background-color: darkgreen;
+}
+
+.mascot {
+	height: 100px;
+	width: 100px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mascot img {
+	width: 100%;
+	height: auto;
+}
