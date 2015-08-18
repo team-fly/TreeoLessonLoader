@@ -1,21 +1,32 @@
-html {
-	background-color: #87c878;	
+html {	
 	height: 100%;
 	width: 100%;
 }
 
 body {
-	background-color: #87c878;
+	width: 100%;
 	position: relative;
 	top: 150px;
+	background-image: url("../img/main_bw1.jpg");
+	background-position: center;
+	background-size: cover;
 }
 
 .form-signin {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.form-group {
+	color: white;
+}
+
+.form-signin #loginForm {
+	color: white;
+}
+
 #signinBtn {
-	background-color: darkgreen;
+	background-color: #2ecc71;
+	border-color: #2ecc71;
 }
 
 .mascot {
