@@ -1,8 +1,7 @@
-<?php
-                
+<?php          
     session_start();
     /* --- The AND only logs out if already logged in (has a session id) --- */
-    if(($_GET['logout']==1 AND $_SESSION['id']) OR ($_SESSION['timeout'] + 15) > time())  { //check for session timeout = 60 mins
+    if(($_GET['logout']==1 AND $_SESSION['id']) OR ($_SESSION['timeout'] + 60*60*2) > time())  { //check for session timeout = 2 hours
         session_destroy();
         $msg = "You have logged out";
     }

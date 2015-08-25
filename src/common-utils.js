@@ -27,3 +27,17 @@ function appendListItem(listId, listItemLabel){
     };
 }
 
+function CenterInsideDiv(divContainer,elementToCenter) {
+    var divContainerHeight = divContainer.height();
+    var elementToCenterHeight = elementToCenter.outerHeight();
+
+    var divContainerWidth = divContainer.width();
+    var elementToCenterWidth = elementToCenter.outerWidth();
+
+    var elementNewTop = divContainerHeight / 2 - elementToCenterHeight / 2;
+    var elementNewLeft = divContainerWidth / 2 - elementToCenterWidth / 2;
+    
+    elementToCenter.css({ top: elementNewTop, left: elementNewLeft });
+}
+
+

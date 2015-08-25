@@ -7,28 +7,34 @@ var MediaTypeIdNVP = {
     text: '#textDisplay'
 };
 
-var dragDealerVisible=false;
-
+var dragDealerInitiated=false;
 
 var index=0;
 var dropdownList=[];
 var json=loadLessonIntoJsonObj();
 var $mediaContainer;
+var videoLoaded=false;
+
+var dragDealer;
+
+var timeoutComplete=false;
 
 var main =function(){
-    $mediaContainer=document.getElementById("mediaContainer");
-    $("#loadingDisplay").hide();
-
     hideAllMediaElements();
-     loadResource();
+    $mediaContainer=document.getElementById("mediaContainer");
+    //$("#loadingDisplay").hide();
+    loadResource();
 
-    $("#btnPrev").addClass("disabled");
+    $("#btnPrev").hide();
 
   	$("#btnNext").click(function () {
-        if( index<json.length){
-          index++;
-          loadResource();
-          $("#btnPrev").removeClass("disabled");
+        
+        if( index>=json.length-1){
+            $("#btnNext").hide();
+        }else{
+            index++;
+            loadResource();
+            $("#btnPrev").show();
         };
     });
 
@@ -36,11 +42,11 @@ var main =function(){
         if(index>0){
             index--;
             loadResource();
-            $("#btnNext").removeClass("disabled");
+            $("#btnNext").show();
         };
 
         if(index<=0){
-            $("#btnPrev").addClass("disabled");
+            $("#btnPrev").hide();
         };
     });
 
@@ -53,6 +59,19 @@ var main =function(){
         loadResource();
     });
 
+    dragDealer=new Dragdealer('videoSlider', {
+        animationCallback: function(x, y) {
+            if(videoLoaded){
+                var duration=document.getElementById('videoPlayer').duration;
+                document.getElementById('videoPlayer').currentTime=(x*duration).toPrecision(5);
+                console.log((x*duration).toPrecision(3));
+                $('#videoSliderValue').text((x*duration).toFixed(2)+"s");
+                //this.horizontal=false;
+                //setTimeout(function(){ dragDealer.horizontal=true; }, 60);
+            }
+        }
+    });
+
     $('#mediaContainer').click(function () {
         $('#myModal').modal('toggle');
     });
@@ -63,7 +82,22 @@ var main =function(){
     });
 
     $('#videoPlayIcon').on('click', playVideo);
+    
+    $('#repeat').click(function(){
+        $("#videoSlider").hide();
+        dragDealerInitiated=false;
+        autoSetHeightWidth();
+        playVideo();
+    });
 
+    $('#videoPlayer').on('ended',function(){
+        $("#repeat").show();
+        if(!dragDealerInitiated){
+            videoLoaded=true;
+            initiateDragDealer();
+        }
+    });
+    
 };
 
 
@@ -71,7 +105,6 @@ function loadResource(){
     //$("#loadingDisplay").fadeIn("slow");
     hideAllMediaElements();
     appendListItem("#lessonStepDropdown", json[index].title);
-
 
     $("#instructionContainer .instruction-body").html(json[index].instruction);
 
@@ -84,27 +117,23 @@ function loadResource(){
               }).attr("src", json[index].location);
             break;
           case "video":
-            $("#videoSrc").attr('src', json[index].location);
+            $("#repeat").hide();
+            removeMedia();
+            //$("#videoSrc").remove();
+            //$("#videoPlayer").add("")
+            
+            var videoSrcTag=sprintf('<source id="videoSrc" src="%s" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />', json[index].location+'?t='+(+new Date()));
+            $(videoSrcTag).appendTo("#videoPlayer");//.add(videoSrcTag);
+            
+            //$("#videoSrc").attr('src', json[index].location);
             $("#videoPlayer").get(0).load();
 
             $("#videoPlayer").get(0).addEventListener('loadedmetadata', function() {
+                $("#videoPlayIcon").show();
                 autoSetHeightWidth();
                 $("#videoDisplay").fadeIn( "fast");
-                $("#videoPlayIcon").show();
-
             });
-
-              $('#videoPlayIcon').on('click', playVideo);
-
-            var dragDealerInitiated=false;
-            $('#videoPlayer').on('ended',function(){
-
-                if(!dragDealerInitiated){
-                    initiateDragDealer();
-                    dragDealerInitiated=true;
-                }
-            });
-
+            
             break;
           case "youtube":
             $("#youtubeDisplay").attr("src", json[index].location);
@@ -128,16 +157,11 @@ function playVideo(){
 
 function initiateDragDealer(){
     $("#videoSlider").show();
-    dragDealerVisible=true;
+    dragDealerInitiated=true;
     autoSetHeightWidth();
+    
     document.getElementById('videoPlayer').pause();
-    var duration=document.getElementById('videoPlayer').duration;
-    new Dragdealer('videoSlider', {
-        animationCallback: function(x, y) {
-            document.getElementById('videoPlayer').currentTime=(x*duration).toFixed(6);
-            $('#videoSliderValue').text((x*duration).toFixed(2)+"s");
-        }
-    });
+    dragDealer.init();
 }
 
 function loadLessonIntoJsonObj(){
@@ -150,17 +174,16 @@ function loadLessonIntoJsonObj(){
 }
 
 function hideAllMediaElements(){
-    $("#textDisplay").hide();
-    $("#youtubeDisplay").hide();
     $("#imageDisplay").hide();
     $("#videoDisplay").hide();
+    $("#textDisplay").hide();
+    $("#youtubeDisplay").hide();
     $("#videoSlider").hide();
-    dragDealerVisible=false;
-
-    $("#youtubeDisplayModal").hide();
-    $("#imageDisplayModal").hide();
-    $("#videoDisplayModal").hide();
-
+    dragDealerInitiated=false;
+    videoLoaded=false;
+    
+    $("#repeat").hide();
+    
     $("#instructionContainer").hide();
 }
 
@@ -184,15 +207,15 @@ function autoSetHeightWidth(){
             //TODO: no offset if height/width greater than container height and width
             element=$("#videoPlayer").get(0);
 
-            var elementVideoHeight=element.videoHeight+(dragDealerVisible ? 1 : 0)*35;
+            var elementVideoHeight=element.videoHeight+(dragDealerInitiated ? 1 : 0)*35;
 
             if((elementVideoHeight/element.videoWidth) > mediaContainerHxWRatio){
                 var newVideoWidth=parseInt(($mediaContainer.clientHeight/elementVideoHeight)*element.videoWidth,10);
-                $("#videoPlayer").css("width", String(newVideoWidth)).css("height",String($mediaContainer.clientHeight-(dragDealerVisible ? 1 : 0)*35));
+                $("#videoPlayer").css("width", String(newVideoWidth)).css("height",String($mediaContainer.clientHeight-(dragDealerInitiated ? 1 : 0)*35));
 
                 var offset=parseInt(($mediaContainer.clientWidth-newVideoWidth)/2, 10);
-
-                $("#videoSlider").css("width", String(newVideoWidth-(dragDealerVisible ? 1 : 0)*24)).css("left", String((dragDealerVisible ? 1 : 0)*12)+"px");
+                //$("#videoSlider").css("width", String(newVideoWidth-(dragDealerInitiated ? 1 : 0)*24));
+                $("#videoSlider").css("width", String(newVideoWidth-(dragDealerInitiated ? 1 : 0)*24)).css("left", String((dragDealerInitiated ? 1 : 0)*12)+"px");
                 $("#videoDisplay").css("width", "").css("height", "100%");
                 $("#videoDisplay").css("left",String(offset)+"px").css("top", "0px");
 
@@ -200,7 +223,7 @@ function autoSetHeightWidth(){
                 var offset;
                 var newVideoHeight=parseInt(($mediaContainer.clientWidth/element.videoWidth)*elementVideoHeight,10);
                 $("#videoPlayer").css("width", String($mediaContainer.clientWidth)).css("height",String(newVideoHeight));
-                offset=parseInt(($mediaContainer.clientHeight-newVideoHeight-(dragDealerVisible ? 1 : 0)*35)/2, 10);
+                offset=parseInt(($mediaContainer.clientHeight-newVideoHeight-(dragDealerInitiated ? 1 : 0)*35)/2, 10);
                 $("#videoSlider").css("width", "100%").css("left", "0px");
                 $("#videoDisplay").css("width", "100%").css("height", "");
 
@@ -211,18 +234,14 @@ function autoSetHeightWidth(){
     }
 }
 
-function CenterInsideDiv(divContainer,elementToCenter) {
-    var divContainerHeight = divContainer.height();
-    var elementToCenterHeight = elementToCenter.outerHeight();
 
-    var divContainerWidth = divContainer.width();
-    var elementToCenterWidth = elementToCenter.outerWidth();
-
-    var elementNewTop = divContainerHeight / 2 - elementToCenterHeight / 2;
-    var elementNewLeft = divContainerWidth / 2 - elementToCenterWidth / 2;
-
-
-    elementToCenter.css({ top: elementNewTop, left: elementNewLeft });
+function removeMedia(){
+    $("#videoSrc").remove();
+    /*
+    
+    $("#videoSrc").attr('src','');
+    $("#videoPlayer").get(0).load();
+    */
 }
 
 $(document).ready(main);

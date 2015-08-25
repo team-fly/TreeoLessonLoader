@@ -2,8 +2,8 @@
     session_start();
     include("connection.php");
     
-    if($_SESSION['id'] AND (($_SESSION['timeout'] + 15) > time())) {	//check for session timeout = 15 seconds
-        $_SESSION['timeout']=time();
+    if($_SESSION['id'] AND (($_SESSION['timeout'] + 60*60*2) > time())) {	//check for session timeout = 2 hours
+        $_SESSION['timeout']=time();	//extend session
 		//Welcome user
     } else {
         echo "please log in first";

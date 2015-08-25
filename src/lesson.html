@@ -24,8 +24,6 @@
 	<script src="https://s3-us-west-2.amazonaws.com/treeo/resources/dragdealer.js"></script>
 	<script src="lesson.js"></script>
 
-
-
     <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -52,8 +50,8 @@
                         </ul>
                     </li>
                 </ul>
-            </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
+            </div>
+        </div>
     </nav>
 
 	<div id="lessonStepContainer" class="row">
@@ -70,10 +68,9 @@
 		<div id="mediaContainer" class="col-sm-9">
 				<img id="imageDisplay" class="lesson-media" />
 				<div id="videoDisplay" class="lesson-media">
-					<input id="videoPlayIcon" type="image" src="img/playIcon.png" alt="Submit" width="128" height="128" style="position:absolute; z-index: 1000;">
-					<video id="videoPlayer" tabindex="0" preload="auto" >
-						<source id="videoSrc" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />
-						<p>Sorry, your browser does not support the &lt;video&gt; element.</p>
+					<input id="videoPlayIcon" type="image" src="img/playIcon.png" alt="Submit" width="128" height="128" style="position:absolute; z-index: 1;">
+					<video id="videoPlayer" tabindex="0"autobuffer="autobuffer" preload="preload" >
+						<source id="videoSrc"   type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />
 					</video>
 					<div id="videoSlider" class="dragdealer">
 						<div class="handle red-bar">
@@ -88,7 +85,7 @@
 			<div class="row instruction-header">
 				<span class="title h4">Instruction</span>
 			</div>
-			<div class="row instruction-body" >Sample Text</div>
+			<div class="row instruction-body scroll-area" ></div>
 		</div>
 	</div>
 
@@ -100,6 +97,12 @@
 			</div>
 			<div class="rightSideButton">
 				<button id="btnNext" class="btn btn-info btn-default-size pull-right btn-navigation" style="margin:10px 25px;" type="submit" >Next</button>
+			</div>
+			<div id="repeat">
+				<a>
+					<i class="fa fa-repeat"></i>
+					<span id="replayText">replay</span>
+				</a>
 			</div>
 		</div>
 	</div>
