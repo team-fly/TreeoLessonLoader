@@ -6,8 +6,8 @@ html {
 body {
 	width: 100%;
 	position: relative;
-	top: 150px;
-	background-image: url("../img/main_bw1.jpg");
+	top: 80px;
+	background-image: url("../img/main_bw1_blur2.jpg");
 	background-position: center;
 	background-size: cover;
 }
@@ -30,13 +30,25 @@ body {
 }
 
 .mascot {
-	height: 100px;
-	width: 100px;
+	height: 175px;
+	width: 175px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .mascot img {
-	width: 100%;
-	height: auto;
+	height: 100%;
+	width: auto;
+}
+
+.alert-danger {
+	/*overwrite the alert-danger class in bootstrap*/
+	background-color: #E74C3C;
+    border-color: #E74C3C;
+}
+
+.alert-info {
+	/*overwrite the alert-info class in bootstrap*/
+    background-color: #6BB9F0;
+    border-color: #6BB9F0;
 }

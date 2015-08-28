@@ -1,5 +1,5 @@
 /// <reference path="../typings/jquery/jquery.d.ts"/>
-var NAVIGATION_URL="navigation.html";
+var NAVIGATION_URL="navigation.php";
 var MediaTypeIdNVP = {
     image: '#imageDisplay',
     video: '#videoDisplay',
