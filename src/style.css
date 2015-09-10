@@ -28,6 +28,10 @@ body {
     z-index:10;
 }
 
+.navbar-btn{
+    width:110px;
+}
+
 #lessonStepContainer{
     width:100%;
     position: absolute;
@@ -178,6 +182,7 @@ body {
 .fa-repeat{
     font-size: 3em;
     color:black;
+    bottom:5px;
 }
 
 .btn-navigation {

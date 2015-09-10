@@ -1,6 +1,6 @@
 var navigationLevel=0;
 var navigationPath="";
-var lessonUrl="lesson.html";
+var lessonUrl="lesson.php";
 
 
 var main =function(){

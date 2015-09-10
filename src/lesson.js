@@ -1,5 +1,5 @@
 /// <reference path="../typings/jquery/jquery.d.ts"/>
-var NAVIGATION_URL="navigation.html";
+var NAVIGATION_URL="navigation.php";
 var MediaTypeIdNVP = {
     image: '#imageDisplay',
     video: '#videoDisplay',
@@ -9,17 +9,20 @@ var MediaTypeIdNVP = {
 
 var dragDealerInitiated=false;
 
+var videoPlayer;
+
 var index=0;
 var dropdownList=[];
 var json=loadLessonIntoJsonObj();
 var $mediaContainer;
+
 var videoLoaded=false;
+var duration;
 
 var dragDealer;
 
-var timeoutComplete=false;
-
 var main =function(){
+    videoPlayer=document.getElementById('videoPlayer');
     hideAllMediaElements();
     $mediaContainer=document.getElementById("mediaContainer");
     //$("#loadingDisplay").hide();
@@ -58,20 +61,26 @@ var main =function(){
         index=$(this).index();
         loadResource();
     });
+    
+    setInterval(function(){
+         if(videoLoaded && dragDealerInitiated){
+            var currentTime=dragDealer.getValue()[0].toPrecision(6)*duration;
+            document.getElementById('videoPlayer').currentTime=currentTime.toFixed(3);
+            $('#videoSliderValue').text(currentTime.toFixed(2)+"s");
+         }
+    }, 50);
 
-    dragDealer=new Dragdealer('videoSlider', {
+    dragDealer=new Dragdealer('videoSlider');
+    /*, {
         animationCallback: function(x, y) {
-            if(videoLoaded){
-                var duration=document.getElementById('videoPlayer').duration;
-                document.getElementById('videoPlayer').currentTime=(x*duration).toPrecision(5);
-                console.log((x*duration).toPrecision(3));
-                $('#videoSliderValue').text((x*duration).toFixed(2)+"s");
+                //document.getElementById('videoPlayer').currentTime=(x.toPrecision(3)*duration).toFixed(4);
+                //console.log((x*duration).toPrecision(3));
+                
                 //this.horizontal=false;
                 //setTimeout(function(){ dragDealer.horizontal=true; }, 60);
-            }
         }
     });
-
+        */
     $('#mediaContainer').click(function () {
         $('#myModal').modal('toggle');
     });
@@ -84,8 +93,9 @@ var main =function(){
     $('#videoPlayIcon').on('click', playVideo);
     
     $('#repeat').click(function(){
-        $("#videoSlider").hide();
         dragDealerInitiated=false;
+        dragDealer.setValue(0, 0, false);
+        $("#videoSlider").hide();
         autoSetHeightWidth();
         playVideo();
     });
@@ -118,20 +128,15 @@ function loadResource(){
             break;
           case "video":
             $("#repeat").hide();
-            removeMedia();
-            //$("#videoSrc").remove();
-            //$("#videoPlayer").add("")
             
-            var videoSrcTag=sprintf('<source id="videoSrc" src="%s" type="video/mp4; codecs=&quot;avc1.42E01E, mp4a.40.2&quot;" />', json[index].location+'?t='+(+new Date()));
-            $(videoSrcTag).appendTo("#videoPlayer");//.add(videoSrcTag);
-            
-            //$("#videoSrc").attr('src', json[index].location);
+            $("#videoSrc").attr('src', json[index].location);
             $("#videoPlayer").get(0).load();
 
             $("#videoPlayer").get(0).addEventListener('loadedmetadata', function() {
                 $("#videoPlayIcon").show();
                 autoSetHeightWidth();
                 $("#videoDisplay").fadeIn( "fast");
+                duration=document.getElementById('videoPlayer').duration;
             });
             
             break;
@@ -152,6 +157,7 @@ function loadResource(){
 
 function playVideo(){
     $("#videoPlayIcon").fadeOut("fast");
+    document.getElementById('videoPlayer').currentTime=0;
     $("#videoPlayer").get(0).play();
 }
 
@@ -159,9 +165,9 @@ function initiateDragDealer(){
     $("#videoSlider").show();
     dragDealerInitiated=true;
     autoSetHeightWidth();
-    
     document.getElementById('videoPlayer').pause();
     dragDealer.init();
+    
 }
 
 function loadLessonIntoJsonObj(){
@@ -214,9 +220,11 @@ function autoSetHeightWidth(){
                 $("#videoPlayer").css("width", String(newVideoWidth)).css("height",String($mediaContainer.clientHeight-(dragDealerInitiated ? 1 : 0)*35));
 
                 var offset=parseInt(($mediaContainer.clientWidth-newVideoWidth)/2, 10);
-                //$("#videoSlider").css("width", String(newVideoWidth-(dragDealerInitiated ? 1 : 0)*24));
-                $("#videoSlider").css("width", String(newVideoWidth-(dragDealerInitiated ? 1 : 0)*24)).css("left", String((dragDealerInitiated ? 1 : 0)*12)+"px");
-                $("#videoDisplay").css("width", "").css("height", "100%");
+                $("#videoSlider").css("width", String(newVideoWidth));
+                //$("#videoSlider").css("width", String(newVideoWidth-(dragDealerInitiated ? 1 : 0)*24)).css("left", String((dragDealerInitiated ? 1 : 0)*12)+"px");
+                //$("#videoSlider").css("width", String(newVideoWidth).css("left", String((dragDealerInitiated ? 1 : 0)*12)+"px"));
+                //$("#videoSlider").css("left", String((dragDealerInitiated ? 1 : 0)*12)+"px");
+                //$("#videoDisplay").css("width", "").css("height", "100%");
                 $("#videoDisplay").css("left",String(offset)+"px").css("top", "0px");
 
             }else{
@@ -232,16 +240,6 @@ function autoSetHeightWidth(){
             CenterInsideDiv($("#videoPlayIcon").parent(), $("#videoPlayIcon"));
             break;
     }
-}
-
-
-function removeMedia(){
-    $("#videoSrc").remove();
-    /*
-    
-    $("#videoSrc").attr('src','');
-    $("#videoPlayer").get(0).load();
-    */
 }
 
 $(document).ready(main);

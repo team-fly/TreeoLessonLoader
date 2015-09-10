@@ -1,3 +1,17 @@
+<?php
+    session_start();
+    include("connection.php");
+    
+    if($_SESSION['id'] AND (($_SESSION['timeout'] + 60*60*2) > time())) {	//check for session timeout = 2 hours
+        $_SESSION['timeout']=time();	//extend session
+		//Welcome user
+    } else {
+        echo "please log in first";
+        header("Location: index.php");
+        exit();
+    }
+?> 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -43,6 +57,11 @@
                         <button id="btn-nav-home" type="button" class="btn btn-default btn-lg navbar-btn">
                             <span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</button>
                     </li>
+					<li class="pull-right" >
+                        <button id="btn-nav-logout" type="button" class="btn btn-default btn-lg navbar-btn" onclick="window.location.href='index.php?logout=1'">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</button>
+                    </li>
+					
                     <li class="dropdown">
                         <a id='navbarTitle' class="dropdown-toggle btn-lg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             </a>
