@@ -23,7 +23,7 @@ var jsonMain = {
         {
           "title": "Getting started with Scratch",
           "type": "video",
-          "instruction": "You can make Scratch programs directly online.'br\"<br>There is an online application that you can use through a web browser to make your Scratch programs.<br><br>Steps:<br>1. Open up a web browser (Chrome, Firefox, IE)<br>2. Either search for \"scratch.mit.edu\" on Google or directly go on the site by clicking here <b><a href=\"scratch.mit.edu\">scratch.mit.edu</a></b>",
+          "instruction": "You can make Scratch programs directly online.<br><br>There is an online application that you can use through a web browser to make your Scratch programs.<br><br>Steps:<br>1. Open up a web browser (Chrome, Firefox, IE)<br>2. Either search for \"scratch.mit.edu\" on Google or directly go on the site by clicking here <b><a href=\"scratch.mit.edu\">scratch.mit.edu</a></b>",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_4.mp4"
         },
         {
@@ -83,7 +83,7 @@ var jsonMain = {
         {
           "title": "The Repeat Block",
           "type": "video",
-          "instruction": "And you would be correct! We can use the <b>repeat</b>block.<br><br>A <b>repeat</b> block allows us to run a script more than once.<br><br>Step:<br>1. Delete all of the duplicated blocks from your script<br>2. Add a <b>repeat</b> block around the remaining blocks<br>3. Click on the script to see it run",
+          "instruction": "And you would be correct! We can use the <b>repeat</b> block.<br><br>A <b>repeat</b> block allows us to run a script more than once.<br><br>Step:<br>1. Delete all of the duplicated blocks from your script<br>2. Add a <b>repeat</b> block around the remaining blocks<br>3. Click on the script to see it run",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_14.mp4"
         },
         {
@@ -185,7 +185,7 @@ var jsonMain = {
         {
           "title": "Task 1-2 Programming the sprite",
           "type": "video",
-          "instruction": "Now it's your turn!<br><br>Using what you've learned from making the the cat dance, program your new sprite to dance along with your cat.<br><br>Experiment with different <b>Motion</b>motion, <b>Sound</b>, and <b>Look</b> blocks.<br><br>Be creative!",
+          "instruction": "Now it's your turn!<br><br>Using what you've learned from making the the cat dance, program your new sprite to dance along with your cat.<br><br>Experiment with different <b>Motion</b>, <b>Sound</b>, and <b>Look</b> blocks.<br><br>Be creative!",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/3_3.mp4"
         },
         {
