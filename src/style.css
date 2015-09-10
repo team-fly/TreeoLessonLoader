@@ -5,8 +5,13 @@ html, body {
 }
 
 body {
-    background-color: #6C7A89;
-} 
+    background-color: #EEEEEE;
+}
+
+* {
+/* Removes rounded corners in Bootstrap*/
+    border-radius: 0 !important;
+}
 
 .btnSmall {
 	width: 150px;
@@ -190,4 +195,25 @@ body {
     margin: 10px 15px;
 }
 
+.navbar-default {
+    /*overwhite the navbar-default class in bootstrap*/
+    color: #EEEEEE;
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+}
 
+.navbar-default .navbar-nav > li > a {
+    color: #EEEEEE;
+}
+
+.btn-info {
+    color: #EEEEEE;
+    background-color: #2C3E50;
+    border-color: #2C3E50;
+}
+
+.btn-navigation > a:hover {
+    color: #2C3E50;
+    background-color: #EEEEEE;
+    border-color: #EEEEEE;
+}
