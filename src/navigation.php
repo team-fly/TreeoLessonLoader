@@ -34,8 +34,14 @@
 	<div class="navbar navbar-default" id="navigationBar">
             <div class="container">
                 <div class="pull-right">
-                    <ul class="navbar-nav nav">
+					<ul class="navbar-nav nav">
+						<li class="pull-right" >
+                        	<button id="btn-nav-logout" type="button" class="btn btn-default btn-lg navbar-btn" onclick="window.location.href='index.php?logout=1'">
+                            <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> Logout</button>
+                    	</li>
+						<!--
                         <li><a href="index.php?logout=1">Log Out</a></li>
+						-->
                     </ul>
                 </div> 
             </div>

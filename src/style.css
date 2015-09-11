@@ -5,12 +5,166 @@ html, body {
 }
 
 body {
-    background-color: #EEEEEE;
+    background-color: #2A2D33;
 }
 
 * {
 /* Removes rounded corners in Bootstrap*/
     border-radius: 0 !important;
+}
+
+#nav_scratch {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;
+}
+
+#nav_scratch:focus,
+#nav_scrach.focus,
+#nav_scratch:hover,
+#nav_scratch:active,
+#nav_scratch.active,
+#nav_scratch:active:hover,
+#nav_scratch.active:hover,
+#nav_scratch:active:focus,
+#nav_scratch.active:focus,
+#nav_scratch:active.focus,
+#nav_scratch.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
+}
+
+#nav_lesson_1 {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;
+}
+
+#nav_lesson_1:focus,
+#nav_lesson_1.focus,
+#nav_lesson_1:hover,
+#nav_lesson_1:active,
+#nav_lesson_1.active,
+#nav_lesson_1:active:hover,
+#nav_lesson_1.active:hover,
+#nav_lesson_1:active:focus,
+#nav_lesson_1.active:focus,
+#nav_lesson_1:active.focus,
+#nav_lesson_1.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
+}
+
+#btnPrev {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;
+}
+
+#btnPrev:focus,
+#btnPrev.focus,
+#btnPrev:hover,
+#btnPrev:active,
+#btnPrev.active,
+#btnPrev:active:hover,
+#btnPrev.active:hover,
+#btnPrev:active:focus,
+#btnPrev.active:focus,
+#btnPrev:active.focus,
+#btnPrev.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
+}
+
+#btnNext {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;
+}
+
+#btnNext:focus,
+#btnNext.focus,
+#btnNext:hover,
+#btnNext:active,
+#btnNext.active,
+#btnNext:active:hover,
+#btnNext.active:hover,
+#btnNext:active:focus,
+#btnNext.active:focus,
+#btnNext:active.focus,
+#btnNext.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
+}
+
+#btn-back {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;   
+}
+
+#btn-back:focus,
+#btn-back.focus,
+#btn-back:hover,
+#btn-back:active,
+#btn-back.active,
+#btn-back:active:hover,
+#btn-back.active:hover,
+#btn-back:active:focus,
+#btn-back.active:focus,
+#btn-back:active.focus,
+#btn-back.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
+}
+
+#btn-nav-home {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;   
+}
+
+#btn-nav-home:focus,
+#btn-nav-home.focus,
+#btn-nav-home:hover,
+#btn-nav-home:active,
+#btn-nav-home.active,
+#btn-nav-home:active:hover,
+#btn-nav-home.active:hover,
+#btn-nav-home:active:focus,
+#btn-nav-home.active:focus,
+#btn-nav-home:active.focus,
+#btn-nav-home.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
+}
+
+#btn-nav-logout {
+    color: #fff;
+    background-color: #12AA52;
+    border-color: #1C7F45;   
+}
+
+#btn-nav-logout:focus,
+#btn-nav-logout.focus,
+#btn-nav-logout:hover,
+#btn-nav-logout:active,
+#btn-nav-logout.active,
+#btn-nav-logout:active:hover,
+#btn-nav-logout.active:hover,
+#btn-nav-logout:active:focus,
+#btn-nav-logout.active:focus,
+#btn-nav-logout:active.focus,
+#btn-nav-logout.active.focus {
+    color: #fff;
+    background-color: #1C7F45;
+    border-color: #196838;
 }
 
 .btnSmall {
@@ -68,15 +222,21 @@ body {
 #instructionContainer .instruction-header{
     margin-right:0px;
     padding: 15px 10px 15px 15px;
-    background-color: #FFFFFF;
+    /*background-color: #FFFFFF;*/
+    background-color: #2A2D33;
+    color: whitesmoke;
+    border-bottom-style: solid;
+    border-color: whitesmoke;
 }
 
 #instructionContainer .instruction-body{
-  height: 100%;
-  padding: 15px 15px 15px 15px;
-  background-color: #C5EFF7;
-  font-family: "Trebuchet MS", Helvetica, sans-serif;
-  margin-right:0px;
+    height: 100%;
+    padding: 15px 15px 15px 15px;
+    /*background-color: #C5EFF7;*/
+    background-color: #2A2D33;
+    color: whitesmoke;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    margin-right:0px;
 }
 
 .scroll-area{
@@ -195,21 +355,8 @@ body {
     margin: 10px 15px;
 }
 
-.navbar-default {
-    /*overwhite the navbar-default class in bootstrap*/
-    color: #EEEEEE;
-    background-color: #2C3E50;
-    border-color: #2C3E50;
-}
-
 .navbar-default .navbar-nav > li > a {
     color: #EEEEEE;
-}
-
-.btn-info {
-    color: #EEEEEE;
-    background-color: #2C3E50;
-    border-color: #2C3E50;
 }
 
 .btn-navigation > a:hover {

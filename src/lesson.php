@@ -102,7 +102,7 @@
 		</div>
 		<div id="instructionContainer" class="col-sm-3">
 			<div class="row instruction-header">
-				<span class="title h4">Instruction</span>
+				<span class="title h4">Instructions</span>
 			</div>
 			<div class="row instruction-body scroll-area" ></div>
 		</div>
