@@ -23,7 +23,7 @@ var jsonMain = {
         {
           "title": "Getting started with Scratch",
           "type": "video",
-          "instruction": "You can make Scratch programs directly online.<br><br>There is an online application that you can use through a web browser to make your Scratch programs.<br><br>Steps:<br>1. Open up a web browser (Chrome, Firefox, IE)<br>2. Either search for \"scratch.mit.edu\" on Google or directly go on the site by clicking here <b><a href=\"scratch.mit.edu\">scratch.mit.edu</a></b>",
+          "instruction": "You can make Scratch programs directly online.<br><br>There is an online application that you can use through a web browser to make your Scratch programs.<br><br>Steps:<br>1. Open up a web browser (Chrome, Firefox, IE)<br>2. Either search for \"scratch.mit.edu\" on Google or directly go on the site by clicking here: <b><a href=\"https://scratch.mit.edu\">scratch.mit.edu</a></b>",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_4.mp4"
         },
         {
@@ -47,7 +47,7 @@ var jsonMain = {
         {
           "title": " Creating a project",
           "type": "video",
-          "instruction": "Now that you have an account, let's make our first program.<br><br>To make a program in Scratch, you need to create a project.<br><br>Steps:<br>1. Click on <b>Create</b> to make  a new project<br>2. Name the project: <b>\"Treeo_1_Part_1\"</b>",
+          "instruction": "Now that you have an account, let's make our first program.<br><br>To make a program in Scratch, you need to create a project.<br><br>Steps:<br>1. Click on <b>Create</b> to make a new project<br>2. Name the project: <b>\"Treeo_1_Part_1\"</b>",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_8.mp4"
         },
         {
@@ -65,7 +65,7 @@ var jsonMain = {
         {
           "title": "Making a script",
           "type": "video",
-          "instruction": "A <b>programming script</b> is created when two or more programming instruction are combined to do something.<br><br>To make a script in Scratch, all you have to do is stack blocks together.<br><br>Let's make a simple script that will make the cat move backward after first moving forward.<br><br>Steps:<br>1. In the blocks palette, drag out a <b>wait</b> block and snap it below <b>move</b> block<br>2. Add in another <b>move</b> block<br>3. Change the value of the second <b>move</b> block to <b>-50</b>. Make sure you type the minus sign before the 50!<br>4. Click on the blocks to run the script<br><br>Think-about-it:<br>Why do we need the <b>wait</b> block in between the <b>move</b> blocks?",
+          "instruction": "A <b>programming script</b> is created when two or more programming instructions are combined to do something.<br><br>To make a script in Scratch, all you have to do is stack blocks together.<br><br>Let's make a simple script that will make the cat move backward after first moving forward.<br><br>Steps:<br>1. In the blocks palette, drag out a <b>wait</b> block and snap it below <b>move</b> block<br>2. Add in another <b>move</b> block<br>3. Change the value of the second <b>move</b> block to <b>-50</b>. Make sure you type the minus sign before the 50!<br>4. Click on the blocks to run the script<br><br>Think-about-it:<br>Why do we need the <b>wait</b> block in between the <b>move</b> blocks?",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_11.mp4"
         },
         {
@@ -77,13 +77,13 @@ var jsonMain = {
         {
           "title": "A very loooooong program",
           "type": "video",
-          "instruction": "Hmm... that seems like a very short dance. How do we make it longer?<br><br>The simple thing to do is to just repeat what we did in the last step:<br><br><center><b>duplicate</b>-><b>add to script</b></center><br><br>But what if we want to have the cat dance for longer, such as 50 times? Oh boy, that will be a very long program if we duplicated it 50 times.<br><br>You much be thinking \"there must be a better way!\"",
+          "instruction": "Hmm... that seems like a very short dance. How do we make it longer?<br><br>The simple thing to do is to just repeat what we did in the last step:<br><br><ol><li>Duplicate</li><li>Add to script</li></ol><br>But what if we want to have the cat dance for longer, such as 50 times? Oh boy, that will be a very long program if we duplicated it 50 times.<br><br>You much be thinking: \"there must be a better way!\"",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_13.mp4"
         },
         {
           "title": "The Repeat Block",
           "type": "video",
-          "instruction": "And you would be correct! We can use the <b>repeat</b> block.<br><br>A <b>repeat</b> block allows us to run a script more than once.<br><br>Step:<br>1. Delete all of the duplicated blocks from your script<br>2. Add a <b>repeat</b> block around the remaining blocks<br>3. Click on the script to see it run",
+          "instruction": "And you would be correct! We can use the <b>repeat</b> block.<br><br>A <b>repeat</b> block allows us to run a script more than once.<br><br>Steps:<br>1. Delete all of the duplicated blocks from your script<br>2. Add a <b>repeat</b> block around the remaining blocks<br>3. Click on the script to see it run",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/1_14.mp4"
         },
         {
@@ -119,7 +119,7 @@ var jsonMain = {
         {
           "title": "Adding visual effects",
           "type": "video",
-          "instruction": "Time for some ohh's and ahh's!<br><br>We can add some visual effects to our backdrop to make our stage more exciting!<br><br>Steps:<br>1. Go to the script tab<br>2. Click on the stage thumbnail to see the script for the stage<br>3. Add in a <b>start</b> block",
+          "instruction": "Time for some ohh's and ahh's!<br><br>We can add some visual effects to our backdrop to make our stage more exciting!<br><br>Steps:<br>1. Go to the scripts tab<br>2. Click on the stage thumbnail to see the script for the stage<br>3. Add in a <b>start</b> block",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/2_4.mp4"
         },
         {
@@ -131,7 +131,7 @@ var jsonMain = {
         {
           "title": "Adding background music",
           "type": "video",
-          "instruction": "<b>Note:</b> you will need a pair of headphones or turn on your speakers for this part to work.<br><br>Now, what's a dance without some music? Let's start by adding some dance music in the background.<br><br>In order to have our music playing at the same time that our cat is dancing, we need to add another script.<br><br>Steps:<br>1. Add in separate <b>start</b> block<br>2. Add in a <b>forever</b> loop to the <b>start</b> block<br>3. Drag in the <b>play sound until done</b> block",
+          "instruction": "<b>Note:</b> you will need a pair of headphones or turn on your speakers for this part to work.<br><br>Now, what's a dance without some music? Let's start by adding some dance music in the background.<br><br>In order to have our music playing at the same time that our cat is dancing, we need to add another script.<br><br>Steps:<br>1. Add in a new <b>when green flag clicked</b> block<br>2. Add in a <b>forever</b> loop underneath<br>3. Drag in the <b>play sound until done</b> block",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/2_6.mp4"
         },
         {
@@ -149,13 +149,13 @@ var jsonMain = {
         {
           "title": "Dropping some beats",
           "type": "video",
-          "instruction": "Let's get some beats on in our dance!<br><br>Before that, we have to get rid of our wait blocks. This is because the sound blocks we are going to use for our beats already have a wait built-in.<br><br>Steps:<br>1. Drag out both of the <b>wait</b> blocks without dragging out the <b>move</b> blocks<br>2. Delete the <b>wait</b> blocks<br>3. Click next to continue<br><br><b>Note:</b> Be careful - when you drag out or delete a block, you will also take out all the blocks below it.",
+          "instruction": "Let's get some beats on in our dance!<br><br>Before that, we have to get rid of our <b>wait</b> blocks. This is because the sound blocks we are going to use for our beats already have a <b>wait</b> block built-in.<br><br>Steps:<br>1. Drag out both of the <b>wait</b> blocks without dragging out the <b>move</b> blocks<br>2. Delete the <b>wait</b> blocks<br>3. Click next to continue<br><br><b>Note:</b> Be careful - when you drag out or delete a block, you will also take out all the blocks below it.",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/2_9.mp4"
         },
         {
           "title": "Dropping some beats - 2",
           "type": "video",
-          "instruction": "Now let's add in some blocks that will make a few beats!<br><br>Steps:<br>1. In the <b>Sound</b> palette, drag <b>play drum</b> block between the <b>move</b> blocks<br>2. Add in another <b>play drum</b> block under the second <b>move</b> block<br>3. Select a drum sound from the dropdown<br>4. Click on the <b>start</b> block to run it!<br><br>Feel free to try out different drum sounds and the length of the beat.",
+          "instruction": "Now let's add in some blocks that will make a few beats!<br><br>Steps:<br>1. In the <b>Sound</b> palette, drag <b>play drum</b> block and place it between the <b>move</b> blocks<br>2. Add in another <b>play drum</b> block under the second <b>move</b> block<br>3. Select a drum sound from the dropdown<br>4. Click on the <b>start</b> block to run it!<br><br>Feel free to try out different drum sounds and the length of the beat.",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/2_10.mp4"
         },
         {
@@ -167,7 +167,7 @@ var jsonMain = {
         {
           "title": "Task Complete!",
           "type": "video",
-          "instruction": "You have completed your first program!<br><br>From this class, you've learned how to:<br><ul><li>give commands to sprites</li><li>stack blocks together to make a script</li><li>use <b>repeat</b> blocks to shorten code</li><li>start & end programs</li><li>add color and sound effects</li></ul>Good job so far!<br><br>We have some extra tasks for you to try out. Click <b>next</b> to get started!",
+          "instruction": "You have completed your first program!<br><br>From this class, you've learned how to:<br><ul><li>Give commands to sprites</li><li>Stack blocks together to make a script</li><li>Use <b>repeat</b> blocks to shorten code</li><li>Start & end programs</li><li>Add color and sound effects</li></ul>Good job so far!<br><br>We have some extra tasks for you to try out. Click <b>next</b> to get started!",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/2_12.mp4"
         },
         {
@@ -179,13 +179,13 @@ var jsonMain = {
         {
           "title": "Task 1-1 Adding a sprite ",
           "type": "video",
-          "instruction": "Adding a sprite can be easily done in Scratch. Let's pick a sprite from Scratch's sprite library!<br><br>Steps:<br>1. In the Sprites area, on the icon to choose a sprite from the library<br>2. Pick a sprite that you like<br>3. Click on the <b>OK</b> button to finalize your choice<br><br>Voila! Now you have another sprite and we can starting programming it as well.",
+          "instruction": "Adding a sprite can be easily done in Scratch. Let's pick a sprite from Scratch's sprite library!<br><br>Steps:<br>1. In the Sprites area, click on the sprite icon to choose a sprite from the library<br>2. Pick a sprite that you like<br>3. Click on the <b>OK</b> button to finalize your choice<br><br>Voila! Now you have another sprite and we can start programming it as well.",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/3_2.mp4"
         },
         {
           "title": "Task 1-2 Programming the sprite",
           "type": "video",
-          "instruction": "Now it's your turn!<br><br>Using what you've learned from making the the cat dance, program your new sprite to dance along with your cat.<br><br>Experiment with different <b>Motion</b>, <b>Sound</b>, and <b>Look</b> blocks.<br><br>Be creative!",
+          "instruction": "Now it's your turn!<br><br>Using what you've learned from making the cat dance, program your new sprite to dance along with your cat.<br><br>Experiment with different <b>Motion</b>, <b>Sound</b>, and <b>Look</b> blocks.<br><br>Be creative!",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/3_3.mp4"
         },
         {
@@ -197,7 +197,7 @@ var jsonMain = {
         {
           "title": "Task 2-1 Playing a note ",
           "type": "video",
-          "instruction": "In the <b>Sound</b> palette, there are lots of blocks that we can use to make our music. Let's try them out.<br><br>Steps:<br>1. Click on the <b>scripts</b> tab<br>2. Click on the <b>stage</b> icon to see the stage's script<br>3. In the <b>sound</b> palette, drag the <b>play note</b> block to the script area as a seperate script<br>4. Click on the block to hear the note that it plays",
+          "instruction": "In the <b>Sound</b> palette, there are lots of blocks that we can use to make our music. Let's try them out.<br><br>Steps:<br>1. Click on the <b>scripts</b> tab<br>2. Click on the <b>stage</b> icon to see the stage's script<br>3. In the <b>sound</b> palette, drag the <b>play note</b> block to the script area as a separate script<br>4. Click on the block to listen to the note that it plays",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/3_4.mp4"
         },
         {
@@ -215,7 +215,7 @@ var jsonMain = {
         {
           "title": "Task 2-4 Repeating!",
           "type": "video",
-          "instruction": "If you want to the tune you just made to play continuously, you can use another <b>forever</b> block.<br><br>Steps:<br>1. From the <b>control</b> palette, add a <b>forever</b> block to your script to repeat the tune",
+          "instruction": "If you want the tune you just made to play continuously, you can use another <b>forever</b> block.<br><br>Steps:<br>1. From the <b>control</b> palette, add a <b>forever</b> block to your script to repeat the tune",
           "location": "https://s3-us-west-2.amazonaws.com/treeo/scratch1/lesson1/3_7.mp4"
         },
         {
