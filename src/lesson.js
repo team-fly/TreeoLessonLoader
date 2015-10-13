@@ -71,16 +71,7 @@ var main =function(){
     }, 50);
 
     dragDealer=new Dragdealer('videoSlider');
-    /*, {
-        animationCallback: function(x, y) {
-                //document.getElementById('videoPlayer').currentTime=(x.toPrecision(3)*duration).toFixed(4);
-                //console.log((x*duration).toPrecision(3));
-                
-                //this.horizontal=false;
-                //setTimeout(function(){ dragDealer.horizontal=true; }, 60);
-        }
-    });
-        */
+
     $('#mediaContainer').click(function () {
         $('#myModal').modal('toggle');
     });
@@ -176,7 +167,7 @@ function loadLessonIntoJsonObj(){
     var lessonNumberIndex=parseInt(lessonLoadInfo[1])-1;
     var lessonString="lesson_"+lessonLoadInfo[1];
 
-    return jsonMain[lessonType][lessonNumberIndex][lessonString];
+    return jsonMain[0][lessonType][lessonNumberIndex][lessonString];
 }
 
 function hideAllMediaElements(){
