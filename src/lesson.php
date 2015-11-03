@@ -75,7 +75,7 @@
 
 	<div id="lessonStepContainer" class="row">
 
-        <div id="loadingDisplay" class="col-sm-8 text-center">
+        <div id="loadingDisplay" class="col-sm-9 text-center">
             <div class="row">
                 <i id="loadingIcon" class="fa fa-circle-o-notch fa-spin"></i>
             </div>

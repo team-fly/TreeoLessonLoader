@@ -25,7 +25,6 @@ var main =function(){
     videoPlayer=document.getElementById('videoPlayer');
     hideAllMediaElements();
     $mediaContainer=document.getElementById("mediaContainer");
-    //$("#loadingDisplay").hide();
     loadResource();
 
     $("#btnPrev").hide();
@@ -72,15 +71,6 @@ var main =function(){
 
     dragDealer=new Dragdealer('videoSlider');
 
-    $('#mediaContainer').click(function () {
-        $('#myModal').modal('toggle');
-    });
-
-    $(".modal-wide").on("show.bs.modal", function() {
-        var height = $(window).height() - 200;
-        $(this).find(".modal-body").css("max-height", height);
-    });
-
     $('#videoPlayIcon').on('click', playVideo);
     
     $('#repeat').click(function(){
@@ -105,6 +95,8 @@ var main =function(){
 function loadResource(){
     //$("#loadingDisplay").fadeIn("slow");
     hideAllMediaElements();
+    
+    //adding the currently loaded step to dropdown menu
     appendListItem("#lessonStepDropdown", json[index].title);
 
     $("#instructionContainer .instruction-body").html(json[index].instruction);
@@ -129,7 +121,6 @@ function loadResource(){
                 $("#videoDisplay").fadeIn( "fast");
                 duration=document.getElementById('videoPlayer').duration;
             });
-            
             break;
           case "youtube":
             $("#youtubeDisplay").attr("src", json[index].location);
@@ -167,7 +158,7 @@ function loadLessonIntoJsonObj(){
     var lessonNumberIndex=parseInt(lessonLoadInfo[1])-1;
     var lessonString="lesson_"+lessonLoadInfo[1];
 
-    return jsonMain[0][lessonType][lessonNumberIndex][lessonString];
+    return jsonMain[lessonType][lessonNumberIndex][lessonString];
 }
 
 function hideAllMediaElements(){

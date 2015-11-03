@@ -30,7 +30,7 @@ body {
     width:100%;
     margin-bottom: 0;
     margin-top:0;
-    z-index:10;
+    /*z-index:10;*/
 }
 
 .navbar-btn{
@@ -103,35 +103,33 @@ body {
 }
 
 .lesson-media{
+  z-index:10;
   position:relative;
 }
 
 .navbar-nav {
     width: 100%;
     text-align: center;
-    z-index:10;
+    /*z-index:20;*/
 }
 
 .navbar-nav > li {
     float: none;
     display: inline-block;
-    z-index:100;
 }
 
 .navbar-nav .dropdown {
     text-align:center;
     margin-right:80px;
-    z-index:100;
 }
 
-#lessonStepDropdown{
+/*#lessonStepDropdown{
     z-index:1100;
-}
+}*/
 
 #navbarTitle{
     font-size: large;
     font-weight: bold;
-    color: #414141;
 }
 
 .navigation-panel {
@@ -143,18 +141,45 @@ body {
     margin: -250px 0 0 -400px;
 }
 
-.modal.modal-wide .modal-dialog {
-    width: 80%;
+
+/* Boostrap Navbar Title Style Override*/
+
+.navbar-default .navbar-nav > li > a {
+    color: #F4F4F4;
 }
-.modal-wide .modal-body {
-    overflow-y: auto;
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #FFFFFF;
 }
 
+.navbar-default .navbar-nav > .active > a, 
+.navbar-default .navbar-nav > .active > a:hover, 
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #F9F9F9;
+    background-color: #283849;
+}
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus {
+    color: #F9F9F9;
+    background-color: #283849;
+}
+
+.open > .dropdown-menu{
+    background-color:#ffffff;
+    z-index:1200;
+}
+
+.dropdown-menu > li > a{
+    color: #597EA2;
+    font-weight: bold;
+}
+
+/*positioning styling for loading icon (from font awesome)*/
 #loadingDisplay{
-    width: 100%;
     position:absolute;
     top:200px;
-    z-index:-1;
+    z-index:1;
 }
 
 #loadingDisplay .fa-circle-o-notch{
@@ -195,8 +220,8 @@ body {
     margin: 10px 15px;
 }
 
+/*overwhite the navbar-default class in bootstrap*/
 .navbar-default {
-    /*overwhite the navbar-default class in bootstrap*/
     color: #EEEEEE;
     background-color: #2C3E50;
     border-color: #2C3E50;

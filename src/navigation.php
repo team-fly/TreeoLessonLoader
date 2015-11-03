@@ -55,10 +55,10 @@
 <div id="navigationContainer-lesson-lv" class="navigation-panel">
 	<a id="nav_lesson_1" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 1</a>
 	<a id="nav_lesson_2" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 2</a>
-	<!--<a id="nav_lesson_3" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 3</a>
+	<a id="nav_lesson_3" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 3</a>
 	<a id="nav_lesson_4" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 4</a>
 	<a id="nav_lesson_5" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 5</a>
-	<a id="nav_lesson_6" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 6</a>
+	<!--<a id="nav_lesson_6" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 6</a>
 	<a id="nav_lesson_7" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 7</a>
 	<a id="nav_lesson_8" class="btn btn-info btn-lg btn-navigation btn-lesson" ><span class="glyphicon glyphicon-folder-open"></span> Lesson 8</a>-->
 
